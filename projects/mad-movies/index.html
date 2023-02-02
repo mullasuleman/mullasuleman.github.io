@@ -1,0 +1,269 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MAD Movies Database | Suleman Mulla</title>
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="icon" type="image/svg+xml" href="./images/mad-logo.svg">
+</head>
+
+<body>
+	<div id="loader-box">
+		<span id="loader"></span>
+	</div>
+	<header>
+		<div class="grid-container grid-padding-x">
+			<div class="grid-x align-justify grid-padding-y">
+				<div class="cell large-1 medium-2 small-3">
+					<img id="logo" src="./images/mad-logo.svg" alt="MAD Movies Database Logo">
+				</div>
+				<div class="cell large-4 small-9">
+					<input name="search" id="search" placeholder="What do you want to watch?" />
+
+					<div class="found">
+						<ul class="search_list">
+						</ul>
+					</div>
+
+				</div>
+			</div>
+	</header>
+	<main>
+		<div class="loader">
+			<img src="./images/mad-logo.svg" />
+		</div>
+		<!-- SPLASH CONTAINER -->
+		<div class="splash_container hide_all">
+			<div class="splash_container grid-container">
+				<div class="grid-x">
+					<div class="cell large-12 small-12 featured-title">
+						<h1>Featured Movies</h1>
+						<p>Discover something new to watch</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="grid-container">
+				<div class="grid-x splash_content align-justify grid-margin-x">
+					<!-- SPLASH PAGE CARDS GO HERE -->
+				</div>
+			</div>
+		</div>
+
+		<!-- MOVIE CONTAINER -->
+		<div class="grid-container movie_container hide_all">
+			<div class="grid-container" id="movie-actor-detail-card">
+				<!-- Movie Info -->
+				<div class="grid-x grid-padding-x">
+					<div class="cell large-12 small-12 featured-title">
+						<h1 class="name">Thor: Ragnarok</h1>
+					</div>
+				</div>
+				<div class="grid-x movie-info">
+					<div class="cell large-5 medium-12 small-12 movie-poster">
+						<img class="main-poster" src="" />
+					</div>
+					<div class="cell large-7 medium-12 small-12">
+						<div class="rating-time-date-box">
+							<div class="pill">
+								<img src="./images/rating-icon.png">
+								<p class="rating">7.8</p>
+							</div>
+							<div class="pill">
+								<img src="./images/hourglass-icon.png">
+								<p class="run_length">2h 25min</p>
+							</div>
+							<div class="pill">
+								<img src="./images/date-icon.png">
+								<p class="date">03/11/2017</p>
+							</div>
+						</div>
+						<div class="movie-details">
+							<div>
+								<p>Rating: <span class="category">PG-13</span></p>
+								<p>Genre: <span class="genre">Action, Adventure, Comedy</span></p>
+								<p>Country: <span class="country">United States</span></p>
+								<p>Language: <span class="language">English</span></p>
+								<p>Colour: <span class="colour">Colour</span></p>
+								<!-- <p>Director: <span class="director">Taika Watiti</span></p> -->
+								<p>Writer: <span class="writers">Eric Pearson, Craig Kyle</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Synopsis -->
+				<div class="grid-x grid-padding-x">
+					<div class="cell large-12 small-12 featured-title">
+						<h1>Synopsis</h1>
+					</div>
+				</div>
+				<div class="grid-x">
+					<div class="cell large-12 small-12">
+						<p class="synopsis-text">
+							Imprisoned on the planet Sakaar, Thor must race against time to return to Asgard and stop
+							Ragnarök, the destruction of his world, at the hands of the powerful and ruthless villain
+							Hela. Thor: Ragnarok is a 2017 American superhero film based on the Marvel Comics character
+							Thor, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures. It
+							is the sequel to 2011's Thor and 2013's Thor: The Dark World, and the seventeenth film in
+							the Marvel Cinematic Universe (MCU).
+						</p>
+					</div>
+				</div>
+
+				<!-- Starring / Cast -->
+				<div class="grid-x grid-padding-x">
+					<div class="cell large-12 small-12 featured-title">
+						<h1>Starring</h1>
+					</div>
+				</div>
+				<div class="grid-container">
+					<div class="grid-x grid-margin-x cast">
+						<!-- CAST CARDS GO HERE -->
+					</div>
+				</div>
+
+				<!-- Screenshots -->
+				<div class="grid-x grid-padding-x">
+					<div class="cell large-12 small-12 featured-title">
+						<h1>Images</h1>
+					</div>
+				</div>
+				<div class="grid-x screenshots">
+					<!-- MOVIE IMAGES/SCREENSHOTS GO HERE -->
+				</div>
+
+				<!-- Did you know -->
+				<div class="grid-x grid-padding-x">
+					<div class="cell large-12 small-12 featured-title">
+						<h1>Did You Know?</h1>
+					</div>
+				</div>
+				<div class="grid-x">
+					<div class="cell large-12 small-12">
+						<p class="did-you-know">
+							Imprisoned on the planet Sakaar, Thor must race against time to return to Asgard and stop
+							Ragnarök
+						</p>
+					</div>
+				</div>
+
+				<!-- Related Movies -->
+				<div class="grid-x grid-padding-x">
+					<div class="cell large-12 small-12 featured-title">
+						<h1>Related</h1>
+					</div>
+				</div>
+				<div class="grid-container">
+					<div class="grid-x grid-margin-x related-movies">
+						<!-- RELATED MOVIES GO HERE -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- PEOPLE CONTAINER -->
+		<div class="grid-container people_container hide_all">
+			<div class="grid-container" id="movie-actor-detail-card">
+
+				<!-- Actor Info -->
+				<div class="grid-x grid-padding-x">
+					<div class="cell large-12 small-12 featured-title">
+						<h1 class="name">Chris Hemsworth</h1>
+					</div>
+				</div>
+				<div class="grid-x actor-info">
+					<div class="grid-x large-4 medium-4 small-12">
+						<div class="cell large-12 small-12 actor-image">
+							<img class="cover-image" src="" />
+							<div class="date-box">
+								<img src="./images/date-icon.png" />
+								<p>Born</p>
+								<span class="born-date">21/10/1994</span>
+							</div>
+							<div class="date-box">
+								<img src="./images/date-icon.png" />
+								<p>Died</p>
+								<span class="died-date">I'm alive!</span>
+							</div>
+						</div>
+					</div>
+					<div class="cell large-8 medium-8 small-12 actor-bio">
+						<p class="biography">
+							Chris Hemsworth was born in Melbourne, Australia, to Leonie (van Os), a teacher of English,
+							and Craig Hemsworth, a social-services counselor. His brothers are actors Liam Hemsworth and
+							Luke Hemsworth. He is of Dutch (from his immigrant maternal grandfather), Irish, English,
+							Scottish, and German ancestry. His uncle, by marriage, was Rod Ansell, the bushman who
+							inspired the film Crocodile Dundee (1986).
+							</br>
+							Chris saw quite a bit of the country in his youth, after his family moved to the Northern
+							Territory before finally settling on Phillip Island, to the south of Melbourne. In 2004, he
+							unsuccessfully auditioned for the role of Robbie Hunter in the Australian soap opera Home
+							and Away (1988) but was recalled for the role of Kim Hyde which he played until 2007. In
+							2006, he entered the Australian version of Dancing with the Stars (2004) and his popularity
+							in the soap enabled him to hang on until show 7 (Dancing with the Stars: Episode #5.7 (2006)
+							when he became the fifth contestant to be eliminated.
+							</br>
+							His first Hollywood appearance was in Star Trek (2009), but it was his titular role in Thor
+							(2011) which propelled him to prominence worldwide. He reprised the character in the science
+							fiction blockbuster The Avengers (2012).
+							</br>
+							Chris's American representative, management company ROAR, also manages actress Elsa Pataky,
+							and it was through them that the two met, marrying in 2010. The couple have a daughter and
+							twin sons.
+						</p>
+					</div>
+				</div>
+
+				<!-- Actor Images -->
+				<div class="grid-x grid-padding-x">
+					<div class="cell large-12 small-12 featured-title">
+						<h1>Images</h1>
+					</div>
+				</div>
+				<div class="grid-x screenshots">
+					<!-- ACTOR IMAGES GO HERE -->
+				</div>
+
+				<!-- Appears in -->
+				<div class="grid-x grid-padding-x">
+					<div class="cell large-12 small-12 featured-title">
+						<h1>Appears in</h1>
+					</div>
+				</div>
+				<div class="grid-container grid-padding-x">
+					<div class="grid-x grid-margin-x actor-movies">
+						<!-- ACTOR'S MOVIES GO HERE -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="grid-container">
+			<div class="grid-x min-height-60">
+				<div class="cell large-8 medium-6 small-12">
+					<p>Copyright © MAD Movies Database</p>
+				</div>
+				<div class="cell large-4 medium-6 small-12" id="social-nav">
+					<img src="./images/facebook_icon.png">
+					<img src="./images/twitter_icon.png">
+					<img src="./images/instagram_icon.png">
+					<img src="./images/youtube_icon.png">
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/what-input.js"></script>
+	<script src="js/vendor/foundation.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>

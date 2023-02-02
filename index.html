@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Suleman Mulla | Web Developer Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta id="themeColor" name="theme-color" content="#FF694D" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<!-- SEO meta -->
+	<meta name="description" content="A front-end web developer from Toronto.">
+	<meta name=”robots” content="index, follow">
+	<meta name="google-site-verification" content="lzFPhKCBesVOcBN-hDiDyqzqGIZTc8wQZ6ocDOVGKU8" />
+
+	<!-- link to css files -->
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- jQuery -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160034491-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-160034491-1');
+	</script>
+
+</head>
+
+<body>
+
+	<header>
+		<a href="#intro" id="logo">Suleman Mulla</a>
+		<nav>
+			<a href="#intro" class="active">Intro</a>
+			<a href="#work">Work</a>
+			<a href="#skills">Skills</a>
+			<a href="#contact">Contact</a>
+		</nav>
+	</header>
+
+	<main>
+		<section id="intro">
+			<div class="content">
+				<div id="introBox">
+					<h1 id="introTitle">Hello!</h1>
+					<p id="introDesc">I am Suleman. I am a front-end web developer living in Toronto. Originally
+						from India, I have a background in Computer Science & Engineering and some experience as a
+						freelance back-end web developer. I also like photography, travelling, hiking, space and rockets
+						&#128640;!</p>
+				</div>
+				<div>
+					<a href="#skills" id="scrollIcon">
+						<div class="chevron"></div>
+						<div class="chevron"></div>
+						<div class="chevron"></div>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<aside>
+			<h2>Here are some of the projects I have worked on.</h2>
+		</aside>
+
+		<section id="work">
+			<div class="title">
+				<h2>Work</h2>
+			</div>
+			<div class="content">
+				<div id="projectBox">
+					<div class="project">
+						<div class="mockupBox">
+							<img class="mockup" src="./images/ibex-mockup.jpg" alt="Ibex snowboards">
+						</div>
+						<h1 class="projectTitle">IBEX Snowboards</h1>
+						<p class="projectCatagory"> // Web Design / Product Design </p>
+						<p class="projectCatagory"> // IBEX is a series of snowboards and apperals inspired by a
+							mountain wanderers. All designs and assets including the logo are original and developed
+							from scratch. This website showcases the brand and products with a unique style. </p>
+						<p class="projectCatagory"> // HTML, CSS, JavaScript, Illustrator, Photoshop </p>
+						<a href="./projects/ibex/" class="projectLink" target="_blank">View Project</a>
+					</div>
+					<div class="project">
+						<div class="mockupBox">
+							<img class="mockup" src="./images/mad-movies-mockup.jpg" alt="MAD Movies">
+						</div>
+						<h1 class="projectTitle">MAD Movies</h1>
+						<p class="projectCatagory">// Site with database connectivity</p>
+						<p class="projectCatagory">// MAD Movies is a dynamic movie database developed to demostrate a
+							site backed by services and database. In addition, it uses Foundation to be responsive
+							across devices.</p>
+						<p class="projectCatagory"> // HTML, CSS, jQuery, Foundations, Photoshop, PHP, MySQL </p>
+						<a href="./projects/mad-movies/" class="projectLink" target="_blank">View Project</a>
+					</div>
+					<div class="project">
+						<div class="mockupBox">
+							<img class="mockup" src="./images/foe-mockup.jpg" alt="Family of Eateries">
+						</div>
+						<h1 class="projectTitle">Family of Eateries</h1>
+						<p class="projectCatagory">// Mobile web app design</p>
+						<p class="projectCatagory">// Family of Eateries is a concept app created to showcase the
+							develepment of a mobile app for a group of restaurants. It is specifically developed for
+							iPhone 6/7/8. It also demonstrates the use of TweenMax library to animate page elements in
+							order to improve user experience.</p>
+						<p class="projectCatagory"> // HTML, CSS, jQuery, GSAP, Photoshop </p>
+						<a href="./projects/foe/" class="projectLink" target="_blank">View Project</a>
+					</div>
+					<div class="project">
+						<div class="mockupBox">
+							<img class="mockup" src="./images/ovbg-mockup.jpg" alt="Oshawa Valley Botanical Gardens">
+						</div>
+						<h1 class="projectTitle">OVBG, Oshawa</h1>
+						<p class="projectCatagory">// QR based web app development</p>
+						<p class="projectCatagory">// A web app developed as an applied research project in partnership
+							with City of Oshawa. Project consisted of an interactive, QR based, mobile-first web app to
+							help visitors guide through the park and present the history of Oshawa Valley Botanical
+							Garden (OVBG).</p>
+						<p class="projectCatagory"> // HTML, CSS, JavaScript, QR Codes, NFC </p>
+						<a href="./projects/ovbg/" class="projectLink" target="_blank">View Project</a>
+					</div>
+					<div class="project">
+						<div class="mockupBox">
+							<img class="mockup" src="./images/connect4-mockup.jpg" alt="Connect 4 Game">
+						</div>
+						<h1 class="projectTitle">Connect Four</h1>
+						<p class="projectCatagory">// A JavaScript Game</p>
+						<p class="projectCatagory">// A classic Connect Four 2-player connection board game developed
+							from scratch with a logic that allows the game to be scalable in either direction
+							infinitely. However, it is limited to a board of 7x5 for this demo.</p>
+						<p class="projectCatagory">// HTML5, CSS, JavaScript (ES6)</p>
+						<a href="./projects/connect4/" class="projectLink" target="_blank">View Project</a>
+					</div>
+					<div class="project">
+						<div class="mockupBox">
+							<img class="mockup" src="./images/photobooth-mockup.jpg" alt="FilterBath Mockup">
+						</div>
+						<h1 class="projectTitle">FilterBath</h1>
+						<p class="projectCatagory">// A JavaScript photobooth app</p>
+						<p class="projectCatagory">// FilterBath is a photobooth web app that uses the onboard camera of
+							the device to generate HTML canvas based images. It allows the user to process the image
+							using various filters, place stickers on the live image, and includes a green screen that
+							can be customized to create an image with a custom background by adjusting the backdrop
+							colors.</p>
+						<p class="projectCatagory">// HTML5, CSS, JavaScript (ES6)</p>
+						<a href="./projects/photobooth/" class="projectLink" target="_blank">View Project</a>
+					</div>
+					<div class="project">
+						<div class="mockupBox">
+							<img class="mockup" src="./images/easy-groceries-mockup.jpg" alt="Easy Groceries">
+						</div>
+						<h1 class="projectTitle">Easy Groceries</h1>
+						<p class="projectCatagory">// An E-commerce site backed by a database</p>
+						<p class="projectCatagory">// Easy Groceries is a dynamic groceries site developed to
+							demonstrate a site backed by a database and creating data endpoints using Object Oriented
+							PHP to interface with the front end.</p>
+						<p class="projectCatagory">// HTML, CSS, jQuery, Foundations, Photoshop, PHP, MySQL/</p>
+						<a href="./projects/easy-groceries/" class="projectLink" target="_blank">View Project</a>
+					</div>
+					<div class="project">
+						<div class="mockupBox">
+							<img class="mockup" src="./images/holycupcakes-mockup.jpg" alt="Holy Cupcakes">
+						</div>
+						<h1 class="projectTitle">Holy Cupcakes</h1>
+						<p class="projectCatagory">// Custom WordPress Theme Development</p>
+						<p class="projectCatagory">// Holy Cupcakes is a concept site developed as a collaborative
+							project and demonstrates development of a custom WordPress theme for a bakery. Project uses
+							WooCommerce alongside WordPress to manage the site, posts and products and a live chat.</p>
+						<p class="projectCatagory">// HTML, CSS, JavaScript, PHP, WordPress, WooCommerce</p>
+						<a href="./projects/holycupcakes/" class="projectLink" target="_blank">View Project</a>
+					</div>
+					<div class="project">
+						<div class="mockupBox">
+							<img class="mockup" src="./images/lakeridge-mockup.jpg"
+								alt="Lakeridge Health - Dispelling Myths of Clinical Trials">
+						</div>
+						<h1 class="projectTitle">Myths of Clinical Trials</h1>
+						<p class="projectCatagory">// A collaborative project made with Vue.js</p>
+						<p class="projectCatagory">// A project made in partnership with Lakeridge Health, Oshawa to
+							teach the facts about common myths of clinical trials. Targeted to potential participants
+							and their families to help them understand the clinical trials by guiding through
+							conversations presented as text-messages.</p>
+						<p class="projectCatagory">// HTML, CSS, Vue.js, Adobe Illustrator, Adobe XD</p>
+						<a href="https://lakeridgemyths.netlify.com/" class="projectLink" target="_blank">View
+							Project</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<aside>
+			<h2>Here are the skills I have.</h2>
+		</aside>
+
+		<section id="skills">
+			<div class="title">
+				<h2>Skills</h2>
+			</div>
+			<div class="content">
+				<div id="skillBox">
+					<div class="skillSet">
+						<h1 class="skillTitle">Front End</h1>
+						<!-- <div class="skillImage">
+							<img src="./images/skill-web.jpg" alt="Web Skills">
+						</div> -->
+						<ul class="skillList">
+							<li>jQuery</li>
+							<li>Vue.js</li>
+							<li>React</li>
+							<li>TypeScript</li>
+							<li>Foundations</li>
+							<li>GSAP</li>
+							<li>SASS</li>
+							<li>Three.js</li>
+							<li>WordPress</li>
+						</ul>
+					</div>
+					<div class="skillSet">
+						<h1 class="skillTitle">Adobe Creative Cloud</h1>
+						<!-- <div class="skillImage">
+							<img src="./images/skill-web.jpg" alt="Web Skills">
+						</div> -->
+						<ul class="skillList">
+							<li>Photoshop</li>
+							<li>Illustrator</li>
+							<li>XD</li>
+							<li>Lightroom</li>
+							<li>Premiere Pro</li>
+							<li>Audition</li>
+						</ul>
+					</div>
+					<div class="skillSet">
+						<h1 class="skillTitle">Back End</h1>
+						<!-- <div class="skillImage">
+							<img src="./images/skill-web.jpg" alt="Web Skills">
+						</div> -->
+						<ul class="skillList">
+							<li>PHP</li>
+							<li>MySQL</li>
+						</ul>
+					</div>
+					<div class="skillSet">
+						<h1 class="skillTitle">Other Tools</h1>
+						<!-- <div class="skillImage">
+							<img src="./images/skill-web.jpg" alt="Web Skills">
+						</div> -->
+						<ul class="skillList">
+							<li>GitHub</li>
+							<li>npm</li>
+						</ul>
+					</div>
+					<div class="skillSet">
+						<h1 class="skillTitle">Google</h1>
+						<!-- <div class="skillImage">
+							<img src="./images/skill-web.jpg" alt="Web Skills">
+						</div> -->
+						<ul class="skillList">
+							<li>Analytics</li>
+							<li>AdMob</li>
+							<li>AdSense</li>
+							<li>Search Console</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<aside>
+			<h2>Have a question? Get in touch.</h2>
+		</aside>
+
+		<section id="contact">
+			<div class="title">
+				<h2>Contact</h2>
+			</div>
+			<div class="content">
+				<div id="formBox">
+					<p id="formMessage"> Leave me a message.</p>
+					<form id="contactForm">
+						<input type="text" name="name" id="name" placeholder="Name *" required>
+						<input type="text" name="email" id="email" placeholder="Email *" required>
+						<input type="text" name="phone" id="phone" placeholder="Contact No">
+						<textarea name="message" id="message" placeholder="Your message... *" required></textarea>
+						<p id="formNote">* Required</p>
+						<button type="submit" id="submit">Send</button>
+						<p id="messageStatus"></p>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div id="copyrightBox">
+			<p>Suleman Mulla © 2020</p>
+		</div>
+		<nav id="socialBox">
+			<a href="https://www.linkedin.com/in/mullasuleman/" class="socialLink" target="_blank">LinkedIn</a>
+			<a href="https://www.instagram.com/mullasuleman/" class="socialLink" target="_blank">Instagram</a>
+			<a href="https://twitter.com/mullasuleman" class="socialLink" target="_blank">Twitter</a>
+		</nav>
+	</footer>
+
+	<!-- link to js files -->
+	<!-- gsap -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
+	<!-- scripts -->
+	<script src="js/animatePageContent.js"></script>
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>

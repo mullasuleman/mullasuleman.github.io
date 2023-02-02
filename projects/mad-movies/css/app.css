@@ -1,0 +1,695 @@
+@font-face {
+    font-family: "Avenir Medium";
+    src: url("./fonts/Avenir-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Avenir Heavy";
+    src: url("./fonts/Avenir-Heavy.ttf");
+}
+
+@font-face {
+    font-family: "Avenir Light";
+    src: url("./fonts/Avenir-Light.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    font-family: "Avenir Medium", sans-serif;
+    /* background-position: center; */
+}
+
+header {
+    background: rgba(256, 256, 256, 0.45);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#loader-box {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background: rgba(256, 256, 256, 0.7);
+    z-index: 3000;
+}
+
+#loader {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-top: 5px solid #383838;
+    border-bottom: 5px solid #383838;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#logo {
+    min-height: 60px;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+#search {
+    margin: 12px auto 12px 60px;
+    padding: 8px;
+    padding-left: 40px;
+    width: 85%;
+    border: 1px solid rgba(56, 56, 56, 0);
+    border-radius: 5px;
+    color: rgba(56, 56, 56);
+    background-image: url(../images/search-icon.png);
+    background-position: 11px 9px;
+    background-repeat: no-repeat;
+    background-color: rgba(200, 200, 200, 0.4);
+    transition-duration: 0.2s;
+}
+
+#search:focus,
+#search:active {
+    outline: none;
+    background-color: rgba(200, 200, 200, 0.2);
+    border: 1px solid rgba(56, 56, 56, 0.7);
+}
+
+#search::placeholder {
+    color: rgba(56, 56, 56, 0.7);
+    font-style: italic;
+    font-family: "Avenir Light", sans-serif;
+}
+
+.button {
+    margin: 10px auto;
+    padding: 11px;
+    width: 95%;
+    border-radius: 5px;
+    color: #383838;
+    background-color: rgba(200, 200, 200, 0.4);
+    transition-duration: 0.5s;
+    font-weight: bold;
+}
+
+.button:hover {
+    color: #383838;
+    background-color: rgb(200, 200, 200, 0.7);
+}
+
+.hide_all {
+    display: none;
+}
+
+.loader {
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 100vw;
+    height: 0vh;
+    display: flex;
+    /* display: none; */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    z-index: 999;
+}
+
+.laoder img {
+    width: 70%;
+}
+
+.featured-title {
+    margin: 15px auto 25px auto;
+    padding-bottom: 10px;
+    color: #383838;
+    border-bottom: 2px solid #ffad1f;
+}
+
+.people_container .featured-title,
+.movie_container .featured-title {
+    padding-left: 30px;
+}
+
+.featured-title h1 {
+    font-size: 2.5rem;
+    line-height: 1.3;
+    margin: 0;
+    font-family: "Avenir Heavy", sans-serif;
+}
+
+.featured-title p {
+    margin-left: 2px;
+    margin-bottom: 5px;
+    color: #555555;
+    font-family: "Avenir Light", sans-serif;
+    font-style: italic;
+    /* font-weight: lighter; */
+}
+
+.movie-card,
+.actor-card {
+    color: #383838;
+    margin-bottom: 2.2rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border: none;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.actor-card {
+    margin-bottom: 1rem;
+}
+
+.movie-card:hover,
+.actor-card:hover {
+    transform: scale(1.01);
+}
+
+.movie-card img,
+.actor-card img {
+    width: 100%;
+    height: 400px;
+    border-bottom: 1px solid #ffad1f;
+    object-fit: cover;
+}
+
+.movie-card .card-section,
+.actor-card .card-section {
+    padding: 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.movie-card .card-info,
+.actor-card .card-info {
+    width: 80%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0.25rem 0.5rem;
+    background: #ffffff;
+}
+
+.movie-card .movie-info {
+    padding: 0.5rem;
+}
+
+.movie-card p,
+.actor-card p {
+    margin-bottom: 0.2rem;
+    text-overflow: ellipsis;
+}
+
+.movie-card .title,
+.actor-card .actor-name {
+    font-size: 1.1rem;
+    max-height: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    font-family: "Avenir Heavy", sans-serif;
+    /* transition: 2s linear; */
+}
+
+.movie-card .title:hover {
+    text-overflow: unset;
+    overflow: visible;
+    animation: rotateText 2s alternate linear 2;
+}
+
+@keyframes rotateText {
+    from {
+        transform: translateX(0px)
+    }
+
+    to {
+        transform: translateX(-150px);
+    }
+}
+
+.movie-card .year,
+.actor-card .character-name {
+    color: #ffad1f;
+    font-weight: bold;
+    font-family: "Avenir Medium", sans-serif;
+}
+
+.movie-card .movie-rating {
+    opacity: 0;
+    width: 20%;
+    display: flex;
+    background: #ffad1f;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    z-index: 1000;
+}
+
+.movie-card:hover>.card-section .movie-rating {
+    opacity: 1;
+}
+
+.movie-card .movie-rating p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Avenir Medium", sans-serif;
+}
+
+footer {
+    color: #383838;
+    background: rgba(256, 256, 256, 0.45);
+    box-shadow: 2px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 16px 0;
+}
+
+#social-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#social-nav img {
+    height: 50%;
+    margin: 15px 0px 15px 20px;
+}
+
+#movie-actor-detail-card {
+    margin: 30px auto 30px auto;
+    background: rgba(256, 256, 256, 0.5);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.movie-info .movie-poster img {
+    width: 100%;
+    padding: 2% 3%;
+}
+
+.movie-info .rating-time-date-box,
+.actor-info .date-box {
+    display: flex;
+    margin: 1% 7%;
+    border-radius: 5px;
+    background: rgba(183, 183, 183, 0.2);
+}
+
+.pill {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50px;
+}
+
+.pill p {
+    display: inline;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Avenir Heavy", sans-serif;
+    margin: 0;
+}
+
+.pill:first-child {
+    border-right: 2px solid #ffffff;
+    width: 25%;
+}
+
+.pill:first-child img {
+    position: relative;
+    left: 25%;
+}
+
+.pill:first-child p {
+    width: 20%;
+    position: relative;
+    left: 35%;
+}
+
+.pill:nth-child(2) {
+    width: 35%;
+}
+
+.pill:nth-child(2) img {
+    position: relative;
+    left: 15%;
+}
+
+.pill:nth-child(2) p {
+    width: 70%;
+    position: relative;
+    left: 23%;
+}
+
+.pill:last-child {
+    border-left: 2px solid #ffffff;
+    width: 40%;
+}
+
+.pill:last-child img {
+    position: relative;
+    left: 13%;
+}
+
+.pill:last-child p {
+    width: 70%;
+    position: relative;
+    left: 23%;
+}
+
+.movie-info .movie-details {
+    margin: 7% 8%;
+}
+
+.movie-info .movie-details p {
+    padding-left: 5px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 0.5px solid rgba(56, 56, 56, 0.5);
+    font-size: 1.1rem;
+    font-family: "Avenir Medium", sans-serif;
+}
+
+.movie-info .movie-details p:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.movie-info .movie-details p span {
+    font-weight: bold;
+    font-family: "Avenir Heavy", sans-serif;
+}
+
+.synopsis-text,
+.did-you-know {
+    padding: 0 2%;
+    color: #383838;
+    font-size: 1.1rem;
+    font-family: "Avenir Medium", sans-serif;
+    line-height: 1.5;
+}
+
+.screenshots img {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    object-fit: cover;
+}
+
+.actor-image img {
+    width: 100%;
+    padding: 1% 3%;
+}
+
+.actor-info .date-box {
+    height: 50px;
+    margin: 2% 3%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.date-box img {
+    position: relative;
+    left: 3%;
+    height: 70%;
+    width: 14%;
+}
+
+.date-box p {
+    margin: 0;
+    width: 25%;
+    position: relative;
+    left: 6%;
+    font-size: 1.5rem;
+    font-weight: normal;
+    border-right: 2px solid #ffffff;
+    font-family: "Avenir Medium", sans-serif;
+}
+
+.date-box span {
+    position: relative;
+    left: 15%;
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: "Avenir Heavy", sans-serif;
+}
+
+.actor-bio {
+    padding: 0 2%;
+    font-size: 1.2rem;
+    font-family: "Avenir Medium", sans-serif;
+}
+
+.actor-bio p {
+    line-height: 1.5;
+}
+
+.found {
+    position: absolute;
+    top: 0;
+    width: 22.5rem;
+    max-width: 30%;
+    max-height: 0rem;
+    /* max-height: 22rem; */
+    overflow: scroll;
+    margin-left: 3rem;
+    margin-top: 4rem;
+    padding: 0rem 0.5rem 0 0.3rem;
+    z-index: 999;
+    transition: 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar {
+    display: none !important;
+}
+
+#search:focus~.found {
+    max-height: 22rem;
+}
+
+.search_list {
+    padding: 0;
+    margin: 0 0.5rem;
+}
+
+.search_list li {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+    list-style: none;
+    background: white;
+    padding: 0.5rem;
+    margin: 0.3rem 0;
+    border-radius: 5px;
+    border: 0.5px solid #383838;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    font-size: 1.2rem;
+    transition-duration: 0.2s;
+    animation: load 0.5s ease-in-out;
+}
+
+@keyframes load {
+    from {
+        margin-top: -1rem;
+    }
+}
+
+.search_list li:hover {
+    cursor: pointer;
+    border: 0.5px solid #ffad1f;
+    transform: scale(0.99);
+}
+
+.search_list div:first-child {
+    height: 3rem;
+    width: 15%;
+    margin-right: 1rem;
+}
+
+.search_list img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 425px) {
+    #logo {
+        min-height: 60px;
+    }
+
+    #search {
+        margin-top: 15px;
+        margin-left: 30px;
+        width: 87%;
+        font-size: 0.8rem;
+        background-position: 10px 6px;
+    }
+
+    .people_container .featured-title,
+    .movie_container .featured-title {
+        padding-left: 20px;
+    }
+
+    .movie-card img,
+    .actor-card img {
+        height: 280px;
+    }
+
+    .featured-title h1 {
+        font-size: 1.7rem;
+    }
+
+    .movie-card p {
+        margin-bottom: 0rem;
+        font-size: 0.8rem;
+    }
+
+    .movie-card .title {
+        font-size: 0.8rem;
+    }
+
+    .movie-card .movie-rating {
+        width: 30%;
+    }
+
+    .movie-card .movie-rating p {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer p {
+        text-align: center;
+        margin: 10px 0 6px 0;
+    }
+
+    #social-nav {
+        padding: 0 10%;
+        justify-content: space-around;
+    }
+
+    #social-nav img {
+        margin-left: 5px;
+    }
+
+    .movie-info .rating-time-date-box {
+        margin: 5% 3%;
+    }
+
+    .pill img {
+        height: 1.2rem;
+    }
+
+    .pill p {
+        font-size: 1rem;
+    }
+
+    .pill:first-child {
+        border-right: 2px solid #ffffff;
+        width: 23%;
+    }
+
+    .pill:first-child img {
+        position: relative;
+        left: 15%;
+    }
+
+    .pill:first-child p {
+        width: 20%;
+        position: relative;
+        left: 25%;
+    }
+
+    .pill:nth-child(2) {
+        width: 32%;
+    }
+
+    .pill:nth-child(2) img {
+        position: relative;
+        left: 10%;
+    }
+
+    .pill:nth-child(2) p {
+        width: 70%;
+        position: relative;
+        left: 15%;
+    }
+
+    .pill:last-child {
+        border-left: 2px solid #ffffff;
+        width: 43%;
+    }
+
+    .pill:last-child img {
+        position: relative;
+        left: 10%;
+    }
+
+    .pill:last-child p {
+        width: 70%;
+        position: relative;
+        left: 18%;
+    }
+
+    .movie-info .movie-details {
+        margin: 7% 2%;
+    }
+
+    .movie-info .movie-details p {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .synopsis-text {
+        padding: 0 3%;
+    }
+
+    .screenshots img {
+        padding: 3% 2%;
+        /* height: 200px; */
+    }
+
+    .actor-bio {
+        padding: 3% 3% 0 3%;
+    }
+
+    .found {
+        max-width: 69%;
+        margin-left: 1rem;
+    }
+
+    .search_list li {
+        font-size: 1rem;
+    }
+}

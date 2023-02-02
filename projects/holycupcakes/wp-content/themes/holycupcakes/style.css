@@ -1,0 +1,1403 @@
+/*!
+Theme Name: Holy Cupcakes
+Theme URI: http://underscores.me/
+Author: WP-Doctors
+Author URI: http://staging.wp-doctors.com
+Description: Holy Cupcakes for CMS 2
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: holycupcakes
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+/* custom css for Holy Cupcakes Theme */
+
+/* ***************************** General Styling **************************** */
+:root{
+    --main-brown: #886248;
+    --darker-brown: #9B6F52;
+    --pink: #FC9885;
+    --white: #FFFFFF;
+    --light-yellow: #F9F6EC;
+    --main-yellow: #ffeeaa;
+}
+
+body {
+    font-family: brandon-grotesque, sans-serif !important;
+    background-color: white !important;
+}
+
+.skip-link {
+    display: none;
+}
+
+.screen-reader-text {
+    display: none;
+    clip: unset !important;
+    height: auto;
+    /* overflow: auto; */
+    position: unset !important;
+    width: auto;
+    word-wrap: normal !important;
+}
+
+.pageTitle {
+    display: none;
+}
+
+/* ***************************** Header Styling **************************** */
+/* main header styling */
+.site-header {
+    background-color: var(--main-brown);
+}
+
+.top-bar h1 {
+    margin-top: unset;
+}
+
+/* top-bar styling */
+.top-bar {
+    background-color: transparent;
+    flex-direction: row;
+}
+
+.top-bar ul {
+    background-color: transparent;
+}
+
+.top-bar a {
+    color: var(--main-yellow);
+    font-size: 1.5rem;
+}
+
+/* title bar (for responsive nav) styling */
+.title-bar {
+    background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.title-bar .custom-logo {
+    padding: 5px;
+}
+
+.title-bar .menu-icon {
+    margin-left: auto;
+    order: 1;
+}
+
+.title-bar .menu-icon::after,
+.title-bar .menu-icon:hover::after {
+    background: var(--pink);
+    -webkit-box-shadow: 0 7px 0 var(--pink), 0 14px 0 var(--pink);
+    box-shadow: 0 7px 0 var(--pink), 0 14px 0 var(--pink);
+}
+
+/* search input and button */
+.top-bar input {
+    background: rgba(255, 238, 170, 0.3);
+    color: var(--main-yellow);
+}
+
+.top-bar input[type=submit] {
+    display: none;
+}
+
+.top-bar input::placeholder {
+    color: var(--main-yellow);
+}
+
+.menu .button {
+    background-color: transparent;
+    height: 40px;
+    padding: 5px;
+    margin-left: -40px;
+}
+
+.menu .button img {
+    height: 80%;
+    width: auto;
+}
+
+/* logo */
+.woocommerce-page .custom-logo,
+.woocommerce .custom-logo,
+.custom-logo {
+    height: 60px;
+    width: auto;
+}
+
+/* cart icon */
+.mini-cart-wrapper {
+    content: '&#x1F6D2';
+    background-color: var(--main-yellow);
+}
+
+@media print,
+screen and (min-width:64em) {
+    .menu.vertical {
+        flex-direction: row;
+    }
+}
+
+@media print,
+screen and (max-width:64em) {
+    .top-bar input[type=submit] {
+        display: unset;
+        background: var(--pink);
+        color: var(--main-yellow);
+    }
+}
+
+@media print,
+screen and (max-width:40em) {
+    .top-bar {
+        flex-direction: column;
+    }
+
+    .top-bar form {
+        display: flex;
+    }
+
+    .top-bar form input {
+        margin-right: 0;
+    }
+
+    .top-bar form input[type=search] {
+        margin-bottom: 0;
+        margin-right: 2.75em;
+    }
+}
+
+/* ***************************** Footer Styling **************************** */
+
+.site-footer {
+    font-family: brandon-grotesque, sans-serif;
+    font-size: 1.1rem;
+    background-color: var(--main-brown);
+}
+
+footer .button.primary {
+    background-color: var(--main-yellow);
+    color: var(--main-brown);
+    width: auto;
+}
+
+footer .button.primary:hover,
+footer .button.primary:active,
+footer .button.primary:focus {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+#wsf-2-field-9 {
+    background-color: var(--pink);
+    color: var(--white);
+    border: none;
+}
+
+button.wsf-button.wsf-button-primary {
+    background-color: var(--pink);
+    color: var(--white);
+    border: none;
+}
+
+.site-info {
+    text-align: center;
+    color: var(--main-yellow);
+    background-color: var(--main-yellow);
+}
+
+.site-info a {
+    color: var(--main-yellow);
+}
+
+#footer-sidebar {
+    padding: 2vh 0;
+}
+
+#footer-sidebar #primary-menu,
+#footer-sidebar h4,
+#footer-sidebar p {
+    display: flex;
+    flex-direction: row;
+}
+
+#footer-sidebar #primary-menu a,
+#footer-sidebar h4 {
+    text-align: left;
+    padding: 0.5vh 0;
+    color: var(--main-brown);
+}
+
+#footer-sidebar h4 {
+    font-weight: bold;
+}
+
+#footer-sidebar a,
+#footer-sidebar p {
+    font-size: 1rem;
+}
+
+#footer-sidebar p {
+    margin-bottom: 0;
+}
+
+#footer-sidebar a:hover {
+    text-decoration: underline;
+}
+
+#footer-sidebar {
+    padding: 1rem;
+    text-align: left;
+}
+#footer-sidebar h4{
+    font-size: 3.5vh;
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.social-media img {
+    width: 24px;
+    margin-right: 20px;
+}
+.woocommerce button.button{
+    margin: 0 0 1rem 0;
+}
+/* ***************************** For Footer Side Bar 1 ***************************** */
+#footer-sidebar1 {
+    margin-bottom: 2vh;
+}
+
+#footer-sidebar1 ul li {
+    margin-right: 2vw;
+}
+
+/* ***************************** Bottom Footer Styling ***************************** */
+#copyright {
+    background-color: var(--main-brown);
+    width: 100%;
+    padding: 16px;
+}
+
+.email-consent>div>div {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+/* ***************************** For Desktop Styling ***************************** */
+@media print,
+screen and (min-width: 40em) {
+    #footer-sidebar #primary-menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #footer-sidebar3 {
+        margin-left: 40px;
+    }
+}
+
+/* ***************************** Footer Talets Styling ***************************** */
+
+@media print,
+screen and (max-width:64em) {
+    #footer-sidebar h4{
+        font-size: 2.5vh;
+    }
+    #footer-sidebar label{
+        font-size: 1.5vh;
+    }
+}
+/* ***************************** Block Styling ***************************** */
+
+.alignfull {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    max-width: 100vw;
+    width: 100vw;
+}
+
+.page-id-8 .wp-block-columns {
+    padding: 1vh 1vw;
+}
+
+.wp-block-column p {
+    line-height: normal;
+}
+
+p {
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--main-brown);
+    margin-top: 30px;
+}
+
+p {
+    color: var(--main-brown);
+    font-size: 21px;
+}
+
+a {
+    margin-top: unset;
+}
+
+a:hover {
+    color: var(--pink);
+}
+
+/* changing the block cover image to NOT have an overlay */
+.wp-block-cover-image.has-background-dim:before,
+.wp-block-cover.has-background-dim:before {
+    opacity: 0;
+}
+
+/* turning off the entry-title so that 
+    we can use a styled H1 in it's place */
+.entry-title {
+    display: none;
+}
+
+/* targets the seperator inserted under  */
+.hSeparator {
+    width: 100%;
+    border: 1px solid;
+    color: var(--main-brown);
+}
+
+/* ***************************** Input Styling ***************************** */
+input,
+input:focus,
+[type=text],
+[type=search],
+[type=email],
+[type=text]:focus,
+[type=search]:focus {
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid var(--main-brown);
+    box-shadow: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* styling for input form */
+span input,
+.form-inner [type=text],
+.form-inner [type=email],
+.form-inner textarea,
+#footer-sidebar2 .menu li input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background: var(--light-yellow);
+}
+
+.form-inner [type=text]:focus,
+#footer-sidebar2 .menu li input:focus {
+    box-shadow: 0 0 5px #cacaca;
+    transition: all 0.1s ease-in-out;
+}
+
+/* ***************************** Home Page Specific Styling ******************************/
+/* all are for excerpt styling, the three posts at the bottom of the page */
+
+.recent-posts-wrapper {
+    background-color: var(--light-yellow);
+}
+
+.recent-post {
+    overflow: hidden;
+}
+
+.homeExcerpt {
+    background-color: var(--light-yellow);
+    padding: 10px 20px;
+    margin: 25px auto 10px;
+}
+
+.homeExcerpt a {
+    text-decoration: none;
+    font-size: 3vh;
+    color: var(--main-brown);
+}
+
+.homeExcerpt p {
+    color: var(--darker-brown);
+    font-size: 18px;
+}
+
+.eSeparator {
+    width: 50px;
+    color: var(--main-brown);
+    border: 1px solid;
+    margin: 2vh 0;
+}
+
+/* setting size of thumbnail image for blog posts */
+.thumbnail-img {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 190px;
+    overflow: hidden
+}
+
+.thumbnail-img img {
+    width: 100%;
+    height: auto;
+}
+
+.excerpt {
+    width: 293px;
+}
+
+/* ***************************** About Us Specific Styling ***************************** */
+.middleAbout {
+    background-color: var(--light-yellow);
+}
+
+.wp-block-group__inner-container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+/* ******************** Colour Settings ******************** */
+.has-lightcream-color {
+    color: var(--light-yellow);
+}
+
+.has-lightcream-background-color {
+    background-color: var(--light-yellow);
+}
+
+.has-cream-color {
+    color: var(--main-yellow);
+}
+
+.has-cream-background-color {
+    background-color: var(--main-yellow);
+}
+
+.has-darkbrown-color {
+    color: var(--main-brown);
+}
+
+.has-darkbrown-background-color {
+    background-color: var(--main-brown);
+}
+
+.has-lightbrown-color {
+    color: var(--darker-brown);
+}
+
+.has-lightbrown-background-color {
+    background-color: var(--darker-brown);
+}
+
+.has-black-color {
+    color: #000000;
+}
+
+.has-black-background-color {
+    background-color: #000000;
+}
+
+.has-white-color {
+    color: var(--white);
+}
+
+.has-white-background-color {
+    background-color: var(--white);
+}
+
+/* ******************** Contact Us Page form ****************** */
+#ws-form-1 input[type=text],
+#ws-form-1 input[type=email],
+#ws-form-1 input[type=tel],
+#ws-form-1 textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background: var(--light-yellow);
+    transition: all 0.5s ease-in-out;
+    box-shadow: inset 0 0 2px #cacaca;
+}
+
+#ws-form-1 input:focus,
+#ws-form-1 textarea:focus {
+    box-shadow: 0 0 5px #cacaca;
+}
+
+#ws-form-1 .button.primary {
+    background-color: var(--pink);
+    border-radius: 5px;
+    color: var(--white);
+    padding: 10px 15px;
+    font-size: large;
+    transition: all 0.5s ease-in-out;
+}
+
+#ws-form-1 .button.primary:hover {
+    box-shadow: 0 0 5px #cacaca;
+}
+
+.callout.success {
+    border-radius: 5px;
+    background-color: var(--main-yellow);
+    color: var(--main-brown);
+    font-weight: 800;
+}
+
+/* ******************** Font Size Settings ******************** */
+
+.has-large-font-size {
+    font-size: 24px;
+}
+
+.has-regular-font-size {
+    font-size: 21px;
+}
+
+.has-small-font-size {
+    font-size: 18px;
+}
+
+
+/* ******************** Blog Styling ******************** */
+
+.blog {
+    padding: 0px;
+    padding-top: 0px;
+}
+
+.blog .entry-meta {
+    font-style: italic;
+}
+
+.blog .post-thumbnail {
+    margin: 20px 0;
+}
+
+.blog li {
+    font-size: 21px;
+}
+
+.page-title {
+    display: block;
+}
+
+.cat-links, .tags-links, .edit-link {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--light-yellow);
+    font-size: 1.1rem;
+}
+
+.post-navigation,
+.posts-navigation {
+    display: inline-block;
+    padding: 20px 0 0px;
+    width: 100%;
+    text-decoration: underline;
+}
+
+.posts-navigation {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.blogBtn {
+    width: 200px;
+    background-color: var(--pink);
+    border-radius: 5px;
+    color: var(--white);
+    padding: 0px 15px 5px 15px;
+    font-size: large;
+    position: absolute;
+    left: 5%;
+    top: 90%;
+    text-align: center;
+    margin: 0px;
+}
+
+/* .eSeparator {
+    width: 100%;
+} */
+
+.products a.button:hover,
+.coupon button:hover,
+.checkout-button:hover,
+.blogBtn:hover {
+    background-color: var(--light-yellow);
+    border: 1px solid var(--pink);
+    color: var(--pink);
+}
+
+.blogExcerpt {
+    background-color: var(--light-yellow);
+}
+
+.blogCard {
+    margin: 25px;
+    height: 460px;
+    position: relative;
+}
+
+.blogExcerpt h3 {
+    margin: 0px;
+}
+
+.blogHr {
+    border: 0.5px solid var(--main-brown);
+}
+
+/* ******************** Sidebar Styling ****************** */
+.sidebar-box {
+    padding-right: 2.5vw;
+}
+
+.widget-area {
+    min-height: 100%;
+    padding: 10px 50px;
+    margin-bottom: 0.5rem;
+    background-color: var(--light-yellow);
+}
+
+.widget-title {
+    /* border-bottom: 2px solid var(--darker-brown); */
+    margin: 1rem 0 1rem 0;
+    display: inline-block;
+    font-size: 3.5vh;
+    width: 100%;
+}
+
+.widget-area input[type=search] {
+    font-size: 1.3rem;
+    background: var(--white);
+}
+
+.widget-area input[type=submit],
+.button,
+.button.primary {
+    background-color: var(--pink);
+    border-radius: 5px;
+    color: var(--white);
+    padding: 10px 15px;
+    font-size: large;
+}
+
+.widget-area ul {
+    list-style: none;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.widget-area li {
+    margin: 5px 0;
+}
+
+.tagcloud {
+    margin: 0.5rem 0;
+}
+
+.tag-cloud-link {
+    font-size: 1rem !important;
+    background: var(--white);
+    margin-right: 3px;
+    line-height: 25px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* ************************ Woo Commercer BUTTON Styling ************************ */
+.woocommerce button.button.alt:hover,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover,
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.checkout-button:hover,
+.input-text.qty.text,
+[type=submit]:hover {
+    background-color: var(--light-yellow);
+    border: 1px solid var(--pink);
+    color: var(--pink);
+    transition: all 0.25s ease-in;
+}
+
+.woocommerce button.button.alt,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.checkout-button,
+[type=submit] {
+    padding: 0.5em 1.5em;
+    background-color: var(--pink);
+    border: 1px solid var(--pink);
+    border-radius: 5px;
+    font-size: 2.5vh;
+    transition: all 0.5s ease-out;
+    color: white;
+}
+
+/* view cart button */
+.woocommerce a.added_to_cart{
+    padding: 0.2em;
+    border: 1px solid var(--pink);
+    border-radius: 5px;
+    font-size: 18px;
+    transition: all 0.5s ease-out;
+    color: var(--pink);
+    margin:0 1em 1em 1em;
+    text-align: center;
+}
+
+/* ******************** Woo Commercer Product Page Styling ****************** */
+
+.woocommerce span.onsale {
+    background: var(--pink);
+    border-radius: 50%;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+    top: auto;
+    left: auto;
+}
+
+.blog-posts-box header {
+    max-height: 100px;
+}
+
+.products li {
+    border: 1px solid #e6e6e6;
+}
+
+.woocommerce-product-gallery__trigger {
+    display: none;
+}
+
+.woocommerce ul.products li.product a img {
+    margin-bottom: 0;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    font-size: 3vh;
+}
+
+.woocommerce div.product p.price ins,
+.woocommerce ul.products li.product .price ins {
+    color: var(--pink);
+    text-decoration: none;
+    font-size: 2.5vh;
+    margin-right: 1em;
+}
+
+.woocommerce div.product p.price del,
+.woocommerce ul.products li.product .price del {
+    color: var(--main-brown);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.woocommerce div.product p.price ins {
+    font-size: 27px;
+}
+
+.woocommerce div.product p.price del {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product_meta {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    margin-top: 1em;
+}
+
+span.tagged_as,
+span.posted_in {
+    color: var(--main-brown);
+    font-weight: bold;
+}
+
+/* ******************** Woo Commercer Cart Page Styling ****************** */
+/* CART IMAGE */
+.woocommerce table.cart img,
+.woocommerce-page #content table.cart img,
+.woocommerce-page table.cart img {
+    width: 30%;
+    height: auto;
+}
+
+.woocommerce a.remove {
+    color: var(--main-brown) !important;
+    font-size: 30px;
+}
+
+.woocommerce a.remove:hover {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+
+/* ******************** Woo Commercer Cart Page Check Out Form Styling ****************** */
+/* input text */
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+    background-color: var(--light-yellow);
+}
+
+.woocommerce ul.products,
+.woocommerce-page ul.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.woocommerce .products ul li,
+.woocommerce ul.products li,
+.woocommerce.columns-3 ul.products li.product {
+    background-color: var(--light-yellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/** for product cards (title, price, add cart button) */
+.woocommerce ul.products li.product .price p,
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
+.woocommerce.columns-3 ul.products li.product h2,
+.woocommerce ul.products li.product .price,
+.woocommerce ul.products li.product .button {
+    margin: auto 0.5em auto 0.5em;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce.columns-3 ul.products li.product h2{
+    font-size: 3vh;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title{
+    font-size: 2.5vh;
+}
+a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart{
+    font-size: 2vh;
+}
+span.woocommerce-Price-amount.amount{
+    margin-top: auto;
+}
+.woocommerce ul.products li.product .button {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.woocommerce .woocommerce-result-count{
+    font-size: 2.5vh;
+}
+
+/** select order by selection tab */
+select{
+    border: 1px solid var(--darker-brown);
+    border-radius: 5px;
+    color: var(--darker-brown);
+}
+select:focus{
+    outline: 0;
+    box-shadow: none;
+}
+/* for tablets */
+@media print,
+screen and (max-width:64em) {
+    .woocommerce ul.products[class*=columns-] li.product,
+    .woocommerce-page ul.products[class*=columns-] li.product {
+        margin: 0 5px 10px 0;
+    }
+    
+}
+/* for mobiles */
+@media print,
+screen and (max-width: 40em) {
+    .woocommerce ul.products li.product .woocommerce-loop-product__title,
+    .woocommerce.columns-3 ul.products li.product h2,
+    .woocommerce ul.products li.product .price,
+    .woocommerce ul.products li.product .button {
+        margin: auto 1vh 2vh 1vh;
+    }
+    .woocommerce ul.products li.product .price p{ 
+        margin: 0;
+    }
+}
+
+/* ******************** Woo Commercer Product Description Products Styling ****************** */
+
+.tabs {
+    border: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul {
+    border: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+    background-color: rgb(251, 238, 186);
+    color: var(--darker-brown);
+    padding: 0.25em 2em;
+    outline: none;
+
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+    background-color: var(--light-yellow);
+    color: var(--main-brown);
+    border-bottom-color: var(--light-yellow);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+    color: var(--main-brown);
+
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+    color: var(--main-brown);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+    margin: 0;
+    padding: 0;
+}
+
+.woocommerce div.product .woocommerce-tabs ul {
+    outline: none;
+}
+
+.woocommerce-Tabs-panel h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    border-bottom: 2px solid var(--pink);
+}
+
+.woocommerce div.product .woocommerce-tabs ul li {
+    color: var(--main-brown);
+}
+
+.woocommerce div.product .woocommerce-tabs .panel {
+    padding: 2em;
+    background-color: var(--light-yellow);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* ******************** Woo Commercer Cart Page Styling ****************** */
+
+thead tr {
+    color: var(--darker-brown);
+    background-color: var(--light-yellow);
+    font-size: 24px;
+    height: 10vh;
+}
+
+.woocommerce-checkout #payment div.form-row,
+.woocommerce-checkout #payment ul.payment_methods,
+tbody tr:nth-child(even) {
+    background-color: var(--light-yellow);
+}
+
+.woocommerce table.shop_table td {
+    border-color: inherit;
+}
+
+td.product-name {
+    font-size: 20px;
+}
+
+td.product-thumbnail {
+    text-align: center;
+}
+
+.woocommerce table.cart td.actions .input-text,
+.woocommerce-page #content table.cart td.actions .input-text,
+.woocommerce-page table.cart td.actions .input-text {
+    width: 100px
+}
+
+.woocommerce table.cart td.actions,
+.woocommerce-page #content table.cart td.actions,
+.woocommerce-page table.cart td.actions {
+    padding: 1em;
+    background-color: var(--light-yellow);
+}
+
+.woocommerce table.shop_table tfoot th,
+.woocommerce table.shop_table,
+.woocommerce table.shop_table tfoot td,
+.woocommerce table.shop_table td {
+    border: inherit;
+    border-collapse: collapse;
+}
+
+.woocommerce-checkout #payment ul.payment_methods {
+    border-bottom: 1px solid var(--pink)
+}
+
+.woocommerce-checkout #payment div.payment_box {
+    background-color: var(--main-yellow);
+}
+
+.woocommerce-checkout #payment div.payment_box::before {
+
+    border: 1em solid var(--main-yellow);
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+}
+
+[type=radio]+label {
+    color: var(--main-brown);
+    font-size: 24px;
+}
+
+.woocommerce table.shop_table th {
+    margin: 0;
+}
+/* ******************** Woo Commercer Cart Page (Removed Product)  Styling ****************** */
+.woocommerce-message{
+    border-top-color: var(--pink);
+}
+.woocommerce-message::before {
+    color: var(--pink);
+}
+/* ******************** Woo Commercer Billing Form  Styling ****************** */
+
+form #customer_details {
+    background-color: var(--light-yellow);
+    padding: 0 2em 2em 2em;
+    border-radius: 10px;
+}
+
+form #customer_details input {
+    background-color: white;
+}
+
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: var(--main-brown);
+    border: none;
+    height: 3.5vh;
+}
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single {
+    border: 1px solid var(--main-brown);
+}
+
+.select2-container--open .select2-dropdown--below {
+    border: 1px solid var(--main-brown);
+    border-top: none
+}
+
+.select2-container--default .select2-results__option[data-selected=true],
+.select2-container--default .select2-results__option--highlighted[aria-selected],
+.select2-container--default .select2-results__option--highlighted[data-selected] {
+    background-color: var(--main-yellow);
+    color: var(--main-brown);
+}
+
+.select2-container--default .select2-results__option[data-selected=true]:focus {
+    outline: none;
+}
+
+.select2-search--dropdown .select2-search__field {
+    margin: 0.5em 0;
+    background-color: var(--light-yellow);
+}
+
+.woocommerce table.shop_table tbody th,
+.woocommerce table.shop_table tfoot td,
+.woocommerce table.shop_table tfoot th {
+    color: var(--main-brown);
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.woocommerce table.shop_table tbody {
+    color: var(--main-brown)
+}
+
+tr.cart_item {
+    background-color: white;
+}
+
+.shop_table.woocommerce-checkout-review-order-table tfoot {
+    background: var(--light-yellow)
+}
+
+.shop_table.woocommerce-checkout #payment ul.payment_methods,
+tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+.woocommerce-info {
+    border: none;
+    background-color: var(--white)4d2;
+    font-size: 18px
+}
+
+.woocommerce-info::before {
+    color: inherit
+}
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+    border: none;
+    box-shadow: none;
+    border-radius: 5px;
+}
+
+.woocommerce form .form-row .input-text,
+.woocommerce-page form .form-row .input-text {
+    background-color: white;
+}
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form label {
+    color: var(--main-brown);
+    font-size: 18px;
+}
+.woocommerce .quantity .qty{
+    display: inline;
+}
+[type=text]{
+    height: auto;
+}
+.woocommerce button.button{
+    font-size: 16px;
+}
+
+/* error message */
+.woocommerce-error{
+    border-top-color: var(--pink);
+}
+.woocommerce-error::before{
+    color: var(--pink)
+}
+strong{
+    color:var(--darker-brown)
+}
+/* ******************** Woo Commercer My Account Styling ****************** */
+
+li {
+    list-style: none;
+}
+
+.woocommerce-MyAccount-navigation-link {
+    padding: 0.5em 0;
+    margin: 0;
+    font-size: 20px;
+    border-bottom: 0.01em solid #cccccc;
+    width: 50%;
+}
+
+.woocommerce-MyAccount-navigation ul {
+    margin: 0;
+}
+
+/* ******************** Woo Commercer Recipe Single Page  Styling ****************** */
+
+#recipe{
+    color: var(--main-brown);
+}
+#recipe li{
+    list-style: unset;
+    margin-bottom: 10px;
+}
+#recipe blockquote{
+    background-color: var(--light-yellow);
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+}
+#recipe blockquote p{
+    color: var(--main-brown);
+}
+
+/* ******************** Woo Commercer Recipe Archive Page Styling ****************** */
+
+.recipeCard{
+    margin: 25px;
+    height: 500px;
+    position: relative;
+    background-color: var(--light-yellow);
+
+}
+.recipeBtn {
+    width: 200px;
+    background-color: var(--pink);
+    border-radius: 5px;
+    color: var(--white);
+    padding: 0px 15px 5px 15px;
+    font-size: large;
+    position: absolute;
+    left: 5%;
+    top: 90%;
+    text-align: center;
+    margin: 0px;
+}
+.recipeBtn:hover{
+    background-color: var(--light-yellow);
+    border: 1px solid var(--pink);
+    color: var(--pink);
+}
+
+/* ******************************* Contact Us Form Styling ************************ */
+label{
+    color: var(--main-brown);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.form-error{
+    font-size: 16px;
+    font-style: italic;
+    color: var(--darker-brown);
+    line-height: 1.6;
+} 
+
+/* ******************************* 404 Page styles ************************ */
+.grid-404 {
+    background-color: var(--light-yellow);
+    padding-bottom: 40px;
+}
+
+@media print,
+screen and (max-width: 40em) {
+    .form-error,
+    [type=checkbox]+label{
+        font-size: 2vh;
+    }
+    .form-error {
+        font-size: 2vh;
+        width: 100%;
+        margin-top: 3vh;
+    }
+    .wp-block-group__inner-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* ******************************* Chat module styles ************************ */
+.wplc_agent_name {
+    font-size: 21px !important;
+}
+
+#wp-live-chat-header,
+#wplc_chatbox_header,
+#wp-live-chat-1,
+#wp-live-chat-2,
+#wp-live-chat-2-info,
+#wplc_start_chat_btn,
+#speeching_button {
+    background-color: var(--pink) !important;
+    color: var(--main-brown) !important;
+}
+
+#speeching_button {
+    font-size: 18px !important;
+}
+
+.wplc-user-message {
+    background-color: var(--main-yellow) !important;
+    color: var(--main-brown) !important;
+    border: none;
+}
+
+.wplc-user-message::before {
+    border-color: transparent var(--main-yellow) !important;
+}
+
+.wplc-admin-message,
+#wp-live-chat input[type=button] {
+    background-color: var(--darker-brown) !important;
+    color: var(--white) !important;
+    border: none;
+}
+
+.wplc-admin-message::before {
+    border-color: transparent var(--darker-brown) !important;
+}
+
+#wplc_chatmsg {
+    font-size: 18px !important;
+}
+
+#wp-live-chat-4 { 
+    background: var(--white);
+}
+
+/* ******************************* Events module styles ************************ */
+#eo_events_agenda_widget-2_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.eo-agenda-widget-nav {
+    display: flex;
+    justify-content: space-between;
+    order: 1;
+}
+
+.eo-agenda-widget-nav-prev,
+.eo-agenda-widget-nav-next {
+    background-color: var(--white) !important;
+    color: var(--darker-brown) !important;
+}
+
+.eo-agenda-widget-nav-prev:hover,
+.eo-agenda-widget-nav-next:hover {
+    background-color: var(--light-yellow) !important;
+    color: var(--darker-brown) !important;
+}
+
+li.date {
+    color: var(--main-brown);
+}
+
+.eo-agenda-widget li.event {
+    background: var(--white) !important;
+}

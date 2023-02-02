@@ -1,0 +1,333 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easy Groceries</title>
+  <link rel="stylesheet" href="css/foundation.min.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+  <header>
+    <div class="grid-container">
+      <div class="grid-x align-justify align-middle height-50">
+        <a href="./" class="cell large-4 medium-4 small-12 logo">
+          <img src="./images/logo.png" alt="Easy Groceries Logo" />
+        </a>
+        <div class="cell large-3 medium-3 small-12 search-box-container">
+          <input type="text" name="search" id="search" placeholder="Search for product or category" data-toggle="0" />
+        </div>
+        <div class="grid-x large-3 medium-4 small-12 align-justify align-middle nav">
+          <a id="search-icon"><img src="./images/search_icon.png" alt="Search Button" /></a>
+          <a href="./">Home</a>
+          <a href="#" id="categories-nav" class="show-for-small-only">Categories</a>
+          <a href="#" id="nav-cart">Cart<span id="cart-counter">0</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- cart container -->
+    <div class="fade hideAll">
+      <span id="cart-close">X</span>
+      <div class="cart-container grid-container">
+        <div class="cart">
+          <ul class="tabs" data-responsive-accordion-tabs="tabs small-accordion medium-tabs large-tabs" id="cart-tabs">
+            <li class="tabs-title is-active"><a href="#cart-panel" aria-selected="true">Cart</a></li>
+            <!-- <li class="tabs-title"><a href="#account-panel">Shipping</a></li> -->
+            <!-- <li class="tabs-title"><a href="#payment-panel">Payment</a></li> -->
+            <!-- <li class="tabs-title"><a href="#finish-panel">Finish</a></li> -->
+          </ul>
+
+          <div class="tabs-content" data-tabs-content="cart-tabs">
+            <div class="tabs-panel is-active" id="cart-panel">
+              <div class="grid-x">
+                <!-- cart-content -->
+                <div class="grid-x large-12 medium-12 small-12">
+                  <!-- product-list -->
+                  <div class="grid-x large-9 medium-9 small-12 product-list">
+
+                    <!-- product-list-titles go here -->
+
+                    <!-- cart items go here -->
+
+                  </div>
+
+                  <!-- cart-total -->
+                  <div class="grid-x large-3 medium-3 small-12 cart-total">
+                    <div class="cell large-12 medium-12 small-12 height-200 order-total">
+                      <p>Order Total</p>
+                      <div class="order-total-box">
+                        <div class="subtotal">
+                          <p class="subtotal-text">Subtotal</p>
+                          <p class="subtotal-amount">$0.00</p>
+                        </div>
+                        <div class="hst">
+                          <p class="hst-text">HST</p>
+                          <p class="hst-amount">$0.00</p>
+                        </div>
+                        <div class="total">
+                          <p class="total-text">Total</p>
+                          <p class="total-amount">$0.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell large-12 medium-12 small-12 text-center checkout">
+                      <p>Checkout</p>
+                    </div>
+                    <div class="cell large-12 medium-12 small-12 text-center continue-shopping">
+                      <p>Continue Shopping</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs-panel" id="account-panel">
+              <div class="grid-x align-center">
+
+                <!-- login box -->
+                <div class="grid-x large-6 medium-6 small-12 login-box hidden">
+                  <form class="grid-x large-12 medium-12 small-12" id="loginForm">
+                    <h4 class="cell large-12 medium-12 small-12">Have an account? Please log in!</h4>
+                    <p class="cell large-12 medium-12 small-12 address-note">Enter your email and password to log in.
+                    </p>
+                    <p class="cell large-12 medium-12 small-12">
+                      <label for="">Email *</label>
+                      <input type="email" name="username" id="username">
+                    </p>
+                    <p class="cell large-12 medium-12 small-12">
+                      <label for="">Password *</label>
+                      <input type="password" name="password" id="password">
+                    </p>
+                    <input class="cell large-12 medium-12 small-12 height-50" type="button" id="loginOK"
+                      value="Log In" />
+                  </form>
+                </div>
+
+                <!-- no account box -->
+                <div class="grid-x large-6 medium-6 small-12 no-account-box hidden">
+                  <div class="grid-x large-12 medium-12 small-12">
+                    <h4 class="cell large-12 medium-12 small-12">Don't have an account?</h4>
+                    <p class="cell large-12 medium-12 small-12 address-note">You can choose to create an account or
+                      checkout as a guest.</p>
+                    <input id="createAccount" class="cell large-12 medium-12 small-12 height-50" type="button"
+                      value="Create New Account">
+                    <h6 class="cell large-12 medium-12 small-12 height-50">OR</h6>
+                    <input id="guest" class="cell large-12 medium-12 small-12 height-50" type="button"
+                      value="Continue As Guest">
+                  </div>
+                </div>
+
+                <!-- create account -->
+                <div class="grid-x large-6 medium-6 small-12 createAccount hidden">
+                  <form class="grid-x large-12 medium-12 small-12 align-justify" id="createAccountForm">
+                    <h4 class="cell large-12 medium-12 small-12">Create an account</h4>
+                    <p class="cell large-12 medium-12 small-12 address-note">Enter your info to create an account.</p>
+                    <p class="cell large-12 medium-12 small-12">
+                      <label for="">Email *</label>
+                      <input type="email" name="ca_username" id="ca_username">
+                    </p>
+                    <p class="cell large-12 medium-12 small-12">
+                      <label for="">Password *</label>
+                      <input type="password" name="ca_password" id="ca_password">
+                    </p>
+                    <p class="cell large-12 medium-12 small-12">
+                      <label for="">Confirm Password *</label>
+                      <input type="password" name="ca_password2" id="ca_password2">
+                    </p>
+                    <input class="cell large-12 medium-12 small-12 height-50" type="button" id="ca_loginOK"
+                      value="Sign Up" />
+                  </form>
+                </div>
+
+                <!-- billing-address -->
+                <div class="grid-x large-6 medium-6 small-12 billing-info hidden">
+                  <form class="grid-x large-12 medium-12 small-12 grid-padding-x">
+                    <h4 class="cell large-12 medium-12 small-12">Billing Address</h4>
+                    <p class="cell large-12 medium-12 small-12 address-note">Enter your billng address.</p>
+                    <p class="cell large-12 medium-12 small-12">
+                      <label for="">Email *</label>
+                      <input type="text" name="billing_email" id="billing_email">
+                    </p>
+                    <p class="cell large-6 medium-6 small-12">
+                      <label for="">First Name *</label>
+                      <input type="text" name="billing_name_first" id="billing_name_first">
+                    </p>
+                    <p class="cell large-6 medium-6 small-12">
+                      <label for="">Last Name *</label>
+                      <input type="text" name="billing_name_last" id="billing_name_last">
+                    </p>
+                    <p class="cell large-12 medium-12 small-12">
+                      <label for="">Address *</label>
+                      <input type="text" name="billing_address" id="billing_address">
+                    </p>
+                    <p class="cell large-4 medium-4 small-12">
+                      <label for="">City *</label>
+                      <input type="text" name="billing_city" id="billing_city">
+                    </p>
+                    <p class="cell large-4 medium-4 small-6">
+                      <label for="">Province *</label>
+                      <input type="text" name="billing_province" id="billing_province" list="province-list">
+                      <datalist id="province-list">
+                        <option>Alberta</option>
+                        <option>British Columbia</option>
+                        <option>Manitoba</option>
+                        <option>New Brunswick</option>
+                        <option>Newfoundland and Labrador</option>
+                        <option>Nova Scotia</option>
+                        <option>Ontario</option>
+                        <option>Prince Edwards Island</option>
+                        <option>Quebec</option>
+                        <option>Saskatchewan</option>
+                        <option>Northwest Territories</option>
+                        <option>Nunavut</option>
+                        <option>Yukon</option>
+                      </datalist>
+                    </p>
+                    <p class="cell large-4 medium-4 small-6">
+                      <label for="">Zip Code *</label>
+                      <input type="text" name="billing_postal_code" id="billing_postal_code">
+                    </p>
+                  </form>
+                </div>
+
+                <!-- shipping-address -->
+                <div class="grid-x large-6 medium-6 small-12 shipping-info hidden">
+                  <form class="grid-x large-12 medium-12 small-12 grid-padding-x">
+                    <h4 class="cell large-12 medium-12 small-12">Shipping Address</h4>
+                    <p class="cell large-12 medium-12 small-12 address-note">Enter your shpping address if different
+                      from billing address.</p>
+                    <p class="cell large-6 medium-6 small-12">
+                      <label for="">First Name *</label>
+                      <input type="text" name="shipping_name_first" id="shipping_name_first">
+                    </p>
+                    <p class="cell large-6 medium-6 small-12">
+                      <label for="">Last Name *</label>
+                      <input type="text" name="shipping_name_last" id="shipping_name_last">
+                    </p>
+                    <p class="cell large-12 medium-12 small-12">
+                      <label for="">Address *</label>
+                      <input type="text" name="shipping_address" id="shipping_address">
+                    </p>
+                    <p class="cell large-4 medium-4 small-12">
+                      <label for="">City *</label>
+                      <input type="text" name="shipping_city" id="shipping_city">
+                    </p>
+                    <p class="cell large-4 medium-4 small-6">
+                      <label for="">Province *</label>
+                      <input type="text" name="shipping_province" id="shipping_province" list="province-list">
+                      <datalist id="province-list">
+                        <option>Alberta</option>
+                        <option>British Columbia</option>
+                        <option>Manitoba</option>
+                        <option>New Brunswick</option>
+                        <option>Newfoundland and Labrador</option>
+                        <option>Nova Scotia</option>
+                        <option>Ontario</option>
+                        <option>Prince Edwards Island</option>
+                        <option>Quebec</option>
+                        <option>Saskatchewan</option>
+                        <option>Northwest Territories</option>
+                        <option>Nunavut</option>
+                        <option>Yukon</option>
+                      </datalist>
+                    </p>
+                    <p class="cell large-4 medium-4 small-6">
+                      <label for="">Zip Code *</label>
+                      <input type="text" name="shipping_postal_code" id="shipping_postal_code">
+                    </p>
+                    <input class="cell large-12 medium-12 small-12 height-50" type="button" id="go_to_payment"
+                      value="Continue" />
+                  </form>
+                </div>
+
+              </div>
+            </div>
+            <div class="tabs-panel" id="payment-panel">
+              <p>Payment Stuff</p>
+            </div>
+            <div class="tabs-panel" id="finish-panel">
+              <p>Order Complete</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="grid-container products-container hideAll">
+      <div class="grid-x align-justify">
+        <!-- browse title -->
+        <div class="cell large-12 medium-12 small-12 container-title">
+          <h1>Category / </h1>
+        </div>
+
+        <!-- category sidebar -->
+        <div class="cell large-3 medium-3 small-0 hideForSmall category-sidebar">
+          <!-- list of categories goes here -->
+        </div>
+
+        <!-- products -->
+        <div
+          class="grid-x large-9 medium-9 small-12 align-justify grid-margin-x grid-margin-y card-container products-grid">
+          <!-- products by category or search go here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- home page / splash container -->
+    <div class="grid-container splash-container hideAll">
+      <div class="grid-x align-justify">
+        <!-- banner -->
+        <div class="cell large-12 medium-12 small-12 banner">
+          <img src="images/banner.jpg" alt="Banana Deal Banner" />
+        </div>
+
+        <!-- browse title -->
+        <div class="cell large-12 medium-12 small-12 container-title">
+          <h1>Browse Categories</h1>
+        </div>
+
+        <div class="grid-x grid-margin-x grid-margin-y card-container category-container">
+          <!-- categories -->
+          <!-- splash page categories go here -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="grid-container">
+      <div class="grid-x hide-for-small-only align-justify height-50 align-middle">
+        <div class="cell large-4 medium-4 small-12">
+          <span>Easy Groceries © 2020</span>
+        </div>
+        <div class="grid-x large-3 medium-5 small-8 align-justify nav">
+          <a>Contact Us</a>
+          <a>Privacy Policy</a>
+        </div>
+      </div>
+      <div class="grid-x grid-padding-y show-for-small-only align-justify height-50">
+        <div class="cell large-4 medium-4 small-12 text-center">
+          <span>Easy Groceries © 2020</span>
+        </div>
+        <div class="grid-x large-3 medium-3 small-12 align-center nav">
+          <a>Contact Us</a>
+          <a>Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/gsap.min.js"></script>
+  <script src="js/vendor/what-input.js"></script>
+  <script src="js/vendor/foundation.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

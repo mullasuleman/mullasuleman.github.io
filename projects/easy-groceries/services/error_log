@@ -1,0 +1,41 @@
+[12-Apr-2020 10:50:42 America/Toronto] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'mullasulemankasi'@'localhost' (using password: YES) in /home/creat957/mullasuleman.com/projects/easy-groceries/services/inc/connect_pdo.php:6
+Stack trace:
+#0 /home/creat957/mullasuleman.com/projects/easy-groceries/services/inc/connect_pdo.php(6): PDO->__construct('mysql:host=loca...', 'mullasulemankas...', 'SGchFVbx')
+#1 /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php(14): require_once('/home/creat957/...')
+#2 /home/creat957/mullasuleman.com/projects/easy-groceries/services/get_departments.php(7): EasyGroceries->__construct()
+#3 {main}
+  thrown in /home/creat957/mullasuleman.com/projects/easy-groceries/services/inc/connect_pdo.php on line 6
+[12-Apr-2020 10:58:52 America/Toronto] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000] [1044] Access denied for user 'creat957_suleman'@'localhost' to database 'easy_ms' in /home/creat957/mullasuleman.com/projects/easy-groceries/services/inc/connect_pdo.php:6
+Stack trace:
+#0 /home/creat957/mullasuleman.com/projects/easy-groceries/services/inc/connect_pdo.php(6): PDO->__construct('mysql:host=loca...', 'creat957_sulema...', 'ea63faotvp')
+#1 /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php(14): require_once('/home/creat957/...')
+#2 /home/creat957/mullasuleman.com/projects/easy-groceries/services/get_departments.php(7): EasyGroceries->__construct()
+#3 {main}
+  thrown in /home/creat957/mullasuleman.com/projects/easy-groceries/services/inc/connect_pdo.php on line 6
+[12-Apr-2020 10:59:02 America/Toronto] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000] [1044] Access denied for user 'creat957_suleman'@'localhost' to database 'easy_ms' in /home/creat957/mullasuleman.com/projects/easy-groceries/services/inc/connect_pdo.php:6
+Stack trace:
+#0 /home/creat957/mullasuleman.com/projects/easy-groceries/services/inc/connect_pdo.php(6): PDO->__construct('mysql:host=loca...', 'creat957_sulema...', 'ea63faotvp')
+#1 /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php(14): require_once('/home/creat957/...')
+#2 /home/creat957/mullasuleman.com/projects/easy-groceries/services/get_departments.php(7): EasyGroceries->__construct()
+#3 {main}
+  thrown in /home/creat957/mullasuleman.com/projects/easy-groceries/services/inc/connect_pdo.php on line 6
+[12-Apr-2020 11:00:53 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 29
+[12-Apr-2020 11:00:59 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 29
+[12-Apr-2020 11:01:07 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 29
+[12-Apr-2020 11:01:10 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 29
+[12-Apr-2020 11:01:30 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 29
+[12-Apr-2020 11:01:44 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 29
+[12-Apr-2020 11:02:00 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 29
+[12-Apr-2020 11:03:12 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 29
+[12-Apr-2020 11:03:52 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 29
+[12-Apr-2020 11:04:23 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 29
+[12-Apr-2020 11:14:38 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 29
+[12-Apr-2020 11:16:15 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 29
+[12-Apr-2020 11:16:48 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 29
+[12-Apr-2020 11:17:00 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 29
+[12-Apr-2020 11:18:30 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 27
+[12-Apr-2020 13:15:32 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 230
+[12-Apr-2020 13:15:32 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 230
+[12-Apr-2020 14:06:09 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 230
+[12-Apr-2020 23:48:35 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 230
+[12-Apr-2020 23:48:35 America/Toronto] PHP Warning:  Invalid argument supplied for foreach() in /home/creat957/mullasuleman.com/projects/easy-groceries/services/easy_groceries.class.php on line 230

@@ -1,0 +1,807 @@
+/* reset css */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* general app styles */
+
+@font-face {
+	font-family: "AvenirReg";
+	src: url(fonts/AvenirNext-Regular.ttf);
+}
+
+@font-face {
+	font-family: "AvenirBold";
+	src: url(fonts/AvenirNext-Bold.ttf);
+}
+
+@font-face {
+	font-family: "AvenirMed";
+	src: url(fonts/AvenirNext-Medium.ttf);
+}
+
+@font-face {
+	font-family: "AvenirDemi";
+	src: url(fonts/AvenirNext-DemiBold.ttf);
+}
+
+@font-face {
+	font-family: "AvenirItalic";
+	src: url(fonts/AvenirNext-Italic.ttf);
+}
+
+body {
+	height: 100vh;
+	background: #fff;
+	font-family: sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#container {
+	box-sizing: content-box;
+	position: relative;
+	width: 375px;
+	height: 667px;
+	overflow: hidden;
+	border: 25px solid #222;
+	border-top-width: 50px;
+	border-bottom-width: 50px;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px rgba(56, 56, 56, 0.5);
+}
+
+main {
+	position: absolute;
+	width: 375px;
+	height: 667px;
+	background: #fff;
+	overflow: hidden;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 375px;
+	height: 67px;
+	top: 0;
+	background: #aaa;
+	box-shadow: 0 2px 5px rgba(56, 56, 56, 0.5);
+	z-index: 1000;
+}
+
+.rest {
+	box-shadow: 5px 5px 20px rgba(56, 56, 56, 0.3);
+}
+
+/* for FOE logo */
+/* .header_logo {
+	height: auto;
+	width: 60%;
+	margin: 17px;
+	margin: auto;
+} */
+
+/* for restaurant logo */
+
+/* option logo center */
+.header_logo {
+	height: 50%;
+	width: auto;
+	margin: 17px;
+	margin-right: auto;
+}
+
+.hamburgerMenu {
+	position: absolute;
+	right: 15px;
+	height: 20px;
+	width: auto;
+	margin: 23px 0;
+}
+
+footer {
+	position: absolute;
+	width: 375px;
+	height: 60px;
+	bottom: 0;
+	background: #aaa;
+	box-shadow: 0px -2px 5px rgba(56, 56, 56, 0.5);
+	color: #fff;
+	display: flex;
+	justify-content: stretch;
+}
+
+.footerButtons {
+	width: 125px;
+	height: 60px;
+	text-align: center;
+	transition: 0.5s ease-in;
+}
+
+.footerButtons img {
+	height: 20px;
+	width: auto;
+	margin-top: 10px;
+}
+
+.footerButtons p {
+	font-family: "AvenirReg", sans-serif;
+	letter-spacing: 0.75px;
+	font-size: 14px;
+}
+
+section {
+	position: absolute;
+	top: 67px;
+	width: 375px;
+	height: 540px;
+	background: #ccc;
+	overflow: auto;
+}
+
+section p {
+	font-family: 'AvenirMed', sans-serif;
+	font-size: 20px;
+}
+
+section h1 {
+	margin-top: 20px;
+	color: #555;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: 'AvenirBold', sans-serif;
+	font-size: 32px;
+
+}
+
+.instructions {
+	width: 300px;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 5px;
+	color: #383838;
+	box-shadow: 2px 2px 5px rgba(56, 56, 56, 0.3);
+	font-family: "AvenirItalic", sans-serif;
+	font-size: 14px;
+}
+
+.error {
+	transform: scaleY(0);
+	transform-origin: top;
+	display: none;
+	margin: 5px auto;
+	transition: 0.5s;
+	color: #fff;
+	background: rgba(255, 0, 0, 0.7) !important;
+}
+
+input,
+select,
+textarea {
+	width: 300px;
+	height: 40px;
+	margin: 10px auto;
+	border: 2px solid #555;
+	border-radius: 5px;
+	padding: 8px 10px;
+	font-family: "AvenirMed", sans-serif;
+	font-size: 16px;
+	color: #555;
+	box-shadow: 2px 2px 5px rgba(56, 56, 56, 0.3);
+	transition: 0.25s;
+}
+
+textarea {
+	height: auto;
+}
+
+
+
+/*/////////////////////////////////////////////////////////*/
+/* HAMBURGER MENU STYLES */
+#hamMenu {
+	width: 310px;
+	height: 667px;
+	display: flex;
+	margin-left: auto;
+	flex-direction: column;
+	align-items: center;
+	background: #c34a4a;
+}
+
+#menu img {
+	width: 100%;
+	padding: 30px 20px;
+}
+
+#hamMenu hr {
+	width: 100%;
+	color: #fff;
+}
+
+.menuItem {
+	width: 100%;
+	height: 60px;
+	padding: 20px;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+}
+
+.menuItem h3 {
+	color: #fff;
+	font-family: "AvenirDemi", sans-serif;
+	font-size: 18px;
+	text-transform: capitalize;
+	text-align: left;
+	letter-spacing: 0.75px;
+}
+
+.menuItem p {
+	opacity: 0;
+	margin-top: -5px;
+	color: #eee;
+	font-family: "AvenirItalic", sans-serif;
+	transition: all 0.75s ease-in-out;
+}
+
+.menuItem:hover {
+	height: 210px;
+	background: #555;
+	box-shadow: inset 0px 5px 20px rgba(56, 56, 56, 0.5),
+		inset 0px -5px 20px rgba(56, 56, 56, 0.5);
+}
+
+.menuItem:hover>p {
+	opacity: 1;
+	margin-top: 15px;
+}
+
+#backToLanding:hover {
+	height: 60px;
+}
+
+
+
+/*/////////////////////////////////////////////////////////*/
+/* SPLASH SCREEN STYLES */
+
+
+
+#splash {
+	background-image: url(../img/background.jpg);
+	background-size: contain;
+}
+
+#splash #foeLogoBackground {
+	width: 256px;
+	height: 256px;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+	background: #c34a4a;
+	border-radius: 50px;
+	box-shadow: 0px 0px 50px rgba(56, 56, 56, 0.3);
+}
+
+#splash #foeLogo {
+	width: 150px;
+	height: auto;
+	position: absolute;
+	top: 42%;
+	left: 50%;
+	transform: translate(-45%, -40%);
+}
+
+#splash #foeLogoText {
+	position: absolute;
+	bottom: 15%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 210px;
+}
+
+
+
+/*/////////////////////////////////////////////////////////*/
+/* LANDING SCREEN STYLES */
+
+
+
+#landing {
+	background-image: url(../img/background.jpg);
+	background-size: contain;
+}
+
+#landing header {
+	flex-direction: column;
+	background: #c34a4a;
+	height: 117px;
+	text-align: center;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#landing header img {
+	height: 50%;
+	margin: auto;
+}
+
+#landing p {
+	width: 100%;
+	color: #383838;
+	background: rgba(256, 256, 256, 0.9);
+	font-family: 'AvenirReg', sans-serif;
+	text-transform: capitalize;
+	padding: 5px 0;
+	text-align: center;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#landing #restCardHolder {
+	position: absolute;
+	top: 120px;
+}
+
+#landing .restCard {
+	width: 325px;
+	height: 160px;
+	margin: 15px 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+	border-radius: 5px;
+	box-shadow: 0px 2px 5px rgba(56, 56, 56, 0.4);
+}
+
+#landing .restCard img {
+	width: 50%;
+	height: auto;
+	align-self: center;
+	margin-top: 10px;
+}
+
+
+/* H&S landing screen box */
+#restCard1 {
+	background: #322a27;
+}
+
+/* crispy's landing screen box */
+#restCard2 {
+	background: #555555;
+}
+
+/* ceviche landing screen box */
+#restCard3 {
+	background: #2a0a46;
+}
+
+#restCard3 img {
+	padding-top: 25px;
+}
+
+
+
+/************ RESTAURANT 1 | Ceviche STYLES *******************/
+
+/* restaurant 1 header styles*/
+#rest1 header {
+	background: #322a27;
+}
+
+/* restaurant 1 footer styles*/
+#rest1 footer {
+	background: #322a27;
+}
+
+/* restaurant 1 home styles */
+
+#rest1 .home {
+	background-image: url(../img/hs_home_bg.jpg);
+}
+
+/* restaurant 1 specials styles */
+
+#rest1 .specials {
+	background-image: url(../img/background.jpg);
+}
+
+#rest1 .specials .price {
+	color: #fbc330;
+}
+
+/* restaurant 1 reservations styles */
+
+#rest1 .reservation {
+	background-image: url(../img/background.jpg);
+}
+
+#rest1 .instructions {
+	background-color: rgba(251, 195, 48, 0.5);
+}
+
+#rest1 input:focus,
+#rest1 select:focus,
+#rest1 textarea:focus {
+	outline: none;
+	border: 2px solid #fbc330;
+	box-shadow: inset 2px 2px 5px rgba(251, 195, 48, 0.1),
+		inset -2px -2px 5px rgba(251, 195, 48, 0.1),
+		2px 2px 5px rgba(56, 56, 56, 0.3);
+}
+
+#rest1 .reserve {
+	background: #fbc330;
+}
+
+#rest1 .reserve:hover {
+	background: #322a27;
+	color: #fbc330;
+}
+
+#rest1 .confirmation {
+	background: #fbc330;
+}
+
+#rest1 .confirmation span {
+	color: #fbc330;
+}
+
+
+
+/************ RESTAURANT 2 | Crispy's STYLES *******************/
+
+/* restaurant 2 header styles*/
+#rest2 header {
+	background: #555;
+}
+
+/* restaurant 2 footer styles*/
+#rest2 footer {
+	background: #555;
+}
+
+/* restaurant 2 home styles */
+
+#rest2 .home {
+	background-image: url(../img/crispys_home_bg.jpg);
+}
+
+/* restaurant 2 specials styles */
+
+#rest2 .specials {
+	background-image: url(../img/background.jpg);
+}
+
+#rest2 .specials .price {
+	color: #f26a24;
+}
+
+/* restaurant 2 reservations styles */
+
+#rest2 .reservation {
+	background-image: url(../img/background.jpg);
+}
+
+#rest2 .instructions {
+	background-color: rgb(242, 106, 36, 0.5);
+}
+
+#rest2 input:focus,
+#rest2 select:focus,
+#rest2 textarea:focus {
+	outline: none;
+	border: 2px solid #f26a24;
+	box-shadow: inset 2px 2px 5px rgba(242, 106, 36, 0.1),
+		inset -2px -2px 5px rgba(242, 106, 36, 0.1),
+		2px 2px 5px rgba(56, 56, 56, 0.3);
+}
+
+#rest2 .reserve {
+	background: #f26a24;
+}
+
+#rest2 .reserve:hover {
+	color: #f26a24;
+	background: #555;
+}
+
+#rest2 .confirmation {
+	background: #f26a24;
+}
+
+#rest2 .confirmation span {
+	color: #f26a24;
+}
+
+
+
+/************ RESTAURANT 3 | Ceviche STYLES *******************/
+
+/* restaurant 3 header styles*/
+#rest3 header {
+	background: #2a0a46;
+}
+
+/* restaurant 3 footer styles*/
+#rest3 footer {
+	background: #2a0a46;
+}
+
+/* restaurant 3 home styles */
+
+#rest3 .home {
+	background-image: url(../img/ceviche_home_bg.jpg);
+}
+
+#rest3 .home .time,
+#rest3 .home .location {
+	margin-top: 10px;
+}
+
+/* restaurant 3 specials styles */
+
+#rest3 .specials {
+	background-image: url(../img/background.jpg);
+}
+
+#rest3 .specials .price {
+	color: #f2a900;
+}
+
+/* restaurant 3 reservations styles */
+
+#rest3 .reservation {
+	background-image: url(../img/background.jpg);
+}
+
+#rest3 .instructions {
+	background-color: rgba(242, 169, 0, 0.5);
+}
+
+#rest3 input:focus,
+#rest3 select:focus,
+#rest3 textarea:focus {
+	outline: none;
+	border: 2px solid #f2a900;
+	box-shadow: inset 2px 2px 5px rgba(242, 169, 0, 0.1),
+		inset -2px -2px 5px rgba(242, 169, 0, 0.1),
+		2px 2px 5px rgba(56, 56, 56, 0.3);
+}
+
+#rest3 .reserve {
+	background: #f2a900;
+}
+
+#rest3 .reserve:hover {
+	background: #2a0a46;
+	color: #f2a900;
+}
+
+#rest3 .confirmation {
+	background: #f2a900;
+}
+
+#rest3 .confirmation span {
+	color: #f2a900;
+}
+
+
+
+/*/////////////////////////////////////////////////////////*/
+/* COMMON HOME STYLES */
+
+
+
+.home {
+	background-position: center;
+	background-size: cover;
+}
+
+.home .aboutText {
+	width: 256px;
+	position: relative;
+	left: 65px;
+	margin-top: 10px;
+}
+
+.home .location {
+	width: 236px;
+	position: relative;
+	left: 75px;
+	margin-top: 20px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.home .time {
+	width: 236px;
+	position: relative;
+	left: 75px;
+	margin-top: 20px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.home img {
+	width: 10%;
+	height: 10%;
+	margin-right: 40px;
+}
+
+
+
+/*/////////////////////////////////////////////////////////*/
+/* COMMON SPECIALS STYLES */
+
+
+
+.specials {
+	background-size: cover;
+	color: #555;
+}
+
+.specials .largeBox {
+	width: 350px;
+	height: 215px;
+	background: #fff;
+	margin: 15px auto;
+	padding: 0px 0px 5px 15px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgba(56, 56, 56, 0.3);
+	overflow: hidden;
+}
+
+.specials .largeBox img {
+	width: 350px;
+	height: 150px;
+	margin-left: -15px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+}
+
+.specials .smallBox {
+	width: 350px;
+	height: 100px;
+	background: #fff;
+	margin: 15px auto;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgba(56, 56, 56, 0.3);
+	overflow: hidden;
+}
+
+.specials .smallBox .imageBox {
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+
+.specials .smallBox img {
+	width: 100px;
+	height: 100px;
+	border-radius: 5px;
+}
+
+.specials .smallBox .textBox {
+	width: 250px;
+	height: 100px;
+	float: right;
+	padding: 10px 15px;
+}
+
+.specials h3 {
+	font-family: 'AvenirDemi', sans-serif;
+	display: inline;
+	font-size: 22px;
+}
+
+.specials .price {
+	position: absolute;
+	right: 15px;
+}
+
+.specials p {
+	font-family: 'AvenirItalic', sans-serif;
+	font-size: 14px;
+}
+
+.specials .largeBox p {
+	width: 250px;
+}
+
+.specials .smallBox p {
+	width: 150px;
+}
+
+
+
+/*/////////////////////////////////////////////////////////*/
+/* COMMON RESERVATION STYLES */
+
+
+
+.reservation {
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.reserve {
+	color: #fff;
+	border: none;
+}
+
+.reserve:focus {
+	border: none !important;
+}
+
+.confirmation {
+	transform: scale(0);
+	opacity: 0;
+	position: absolute;
+	top: 135px;
+	width: 300px;
+	height: 410px;
+	background: #383838;
+	color: #fff;
+	text-align: center;
+	padding: 100px 50px;
+	border-radius: 5px;
+	box-shadow: 5px 5px 50px rgba(56, 56, 56, 0.3);
+}
+
+.confirmation span {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	height: 30px;
+	width: 30px;
+	background: #fff;
+	padding: 5px;
+	border-radius: 50%;
+	font-family: "AvenirBold", sans-serif;
+	box-shadow: 5px 5px 50px rgba(56, 56, 56, 0.3);
+	;
+}
+
+.confirmation img {
+	width: 74px;
+	height: auto;
+	margin-bottom: 30px;
+}
+
+.confirmation h3 {
+	font-family: "AvenirDemi", sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.confirmation p {
+	font-family: "AvenirItalic", sans-serif;
+	font-size: 14px;
+}
+
+@media only screen and (max-width: 415px) {
+	#container {
+		position: relative;
+		width: 375px;
+		height: 667px;
+		overflow: hidden;
+		border: 10px solid #222;
+		border-top-width: 25px;
+		border-bottom-width: 25px;
+		border-radius: 20px;
+		box-shadow: none;
+	}
+}

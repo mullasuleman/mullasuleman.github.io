@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Filter Bath | Photobooth</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header>
+		<h1>Filter Bath</h1>
+	</header>
+	<main>
+		<!-- container for the large feed -->
+		<article id="feeds">
+			<canvas class="photo"></canvas>
+			<img id="bg" src="images/bg_image.jpg" style="display: none;">
+		</article>
+
+		<!-- container for all the filter feeds -->
+		<article id="filters">
+			<h2 class="tabs" data-toggle="0">Filters</h2>
+			<section>
+				<video class="player"></video>
+				<p>Original</p>
+			</section>
+			<section>
+				<canvas id="redPreview" class="player"></canvas>
+				<p>Red Filter</p>
+			</section>
+			<section>
+				<canvas id="splitPreview" class="player"></canvas>
+				<p>Split Filter</p>
+			</section>
+			<section>
+				<canvas id="greenScreenPreview" class="player"></canvas>
+				<p>Green Screen</p>
+			</section>
+			<section>
+				<canvas id="nightModePreview" class="player"></canvas>
+				<p>Night Vision</p>
+			</section>
+			<section>
+				<canvas id="pinkStalePreview" class="player"></canvas>
+				<p>Pink Stale</p>
+			</section>
+		</article>
+
+		<!-- capture button -->
+		<button id="captureButton">
+			<img src="./images/camera-icon.svg" alt="Capture Button">
+		</button>
+
+		<!-- container for all the pictures -->
+		<article id="gallery">
+			<p class="tabs" data-toggle="0">Gallery</p>
+			<section class="strip"></section>
+		</article>
+
+		<!-- container for the green screen slider controls -->
+		<article id="controls">
+			<h2 class="tabs" data-toggle="0">Color Range</h2>
+			<form>
+				<section class="rgb">
+					<label for="rMin">Red Min: </label>
+					<input type="range" min=0 max=255 name="rMin" id="rMin" value="0" class="slider">
+					<label for="rMax">Red Max: </label>
+					<input type="range" min=0 max=255 name="rMax" id="rMax" value="255" class="slider">
+				</section>
+
+				<section class="rgb">
+					<label for="gMin">Green Min: </label>
+					<input type="range" min=0 max=255 name="gMin" id="gMin" value="0" class="slider">
+					<label for="gMax">Green Max: </label>
+					<input type="range" min=0 max=255 name="gMax" id="gMax" value="255" class="slider">
+				</section>
+
+				<section class="rgb">
+					<label for="bMin">Blue Min: </label>
+					<input type="range" min=0 max=255 name="bMin" id="bMin" value="0" class="slider">
+					<label for="bMax">Blue Max: </label>
+					<input type="range" min=0 max=255 name="bMax" id="bMax" value="255" class="slider">
+				</section>
+			</form>
+		</article>
+
+		<!-- container for the stickers -->
+		<article id="stickers">
+			<h2 class="tabs" data-toggle="0">Stickers</h2>
+			<section>
+				<img id="emoji1" class="sticker" draggable="1" src="./images/emoji1.png">
+			</section>
+			<section>
+				<img id="emoji2" class="sticker" draggable="1" src="./images/emoji2.png">
+			</section>
+			<section>
+				<img id="emoji3" class="sticker" draggable="1" src="./images/emoji3.png">
+			</section>
+			<section>
+				<button id="resetSticker">Reset</button>
+			</section>
+		</article>
+	</main>
+	<!-- gsap script -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
+	<script src="script.js"></script>
+</body>
+
+</html>

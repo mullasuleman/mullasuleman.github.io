@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>Family of Eateries</title>
+
+	<!-- link to css files -->
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- link to js files -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+</head>
+
+<body>
+
+	<div id="container">
+		<!-- main menu -->
+		<main id="menu">
+			<div id="hamMenu">
+				<img src="img/foe_header_logo.svg" alt="Family of Eateries" />
+				<hr>
+				<div class="menuItem" id="backToLanding">
+					<h3>Select another Resturant</h3>
+				</div>
+				<hr>
+				<div class="menuItem">
+					<h3>About Us</h3>
+					<p>We are a family of restaurants including two Michelin star winner Ceviche, Hearth & Stone with a
+						warm experience, and Crispy's giving you a crisp and quick solution to your hunger! </p>
+				</div>
+				<hr>
+				<div class="menuItem">
+					<h3>Contact Us</h3>
+					<p>Address: 123 Bloor St West, Toronto</p>
+					<p>Email: contact_us@foe.ca</p>
+					<p>Phone: (416) 123-1234</p>
+				</div>
+				<hr>
+			</div>
+		</main>
+
+		<!-- splash screen - FOE logo -->
+		<main id="splash">
+			<div id="foeLogoBackground">
+				<img id="foeLogo" src="img/foe_logo.svg" alt="Family of Eateries" />
+			</div>
+			<img id="foeLogoText" src="img/foe_logo_text.svg" alt="Family of Eateries" />
+		</main>
+
+		<!-- crispy's landing screen - restaurant logos -->
+		<main id="landing">
+			<header>
+				<img src="img/foe_header_logo.svg" alt="Family of Eateries" />
+				<p>Select a restaurant</p>
+			</header>
+			<div id="restCardHolder">
+				<div class="restCard" id="restCard1">
+					<img src="img/hs_logo.svg" alt="Hearth and Stone" />
+					<p>Fast Casual Food</p>
+				</div>
+				<div class="restCard" id="restCard2">
+					<img src="img/crispys_logo.svg" alt="Crispy's" />
+					<p>Fast Food</p>
+				</div>
+				<div class="restCard" id="restCard3">
+					<img src="img/ceviche_logo.svg" alt="Ceviche" />
+					<p>Fine Dining</p>
+				</div>
+			</div>
+		</main>
+
+		<!-- restaurant 1 -->
+		<main id="rest1" class="rest">
+			<header>
+				<img class="header_logo" src="img/hs_header_logo.svg" alt="Ceviche" />
+				<!-- <img class="header_logo" src="img/foe-wordmark.png" alt="Family of Eateries" /> -->
+				<img class="hamburgerMenu" src="img/hamburger.gif" alt="Menu" data-click-stat="1">
+			</header>
+
+			<section class="home">
+				<h1 class="reveal">About Us</h1>
+				<p class="aboutText reveal">We are a symbol of warmth and welcome. We are a simple pleasure, honest and
+					genuine. We are a life story told over dinner. We are a long lunch with an old friend. We are your
+					weekday morning ritual. We are the kindest gesture of neighbors. We are home. We are family. We are
+					friends.</p>
+
+				<div class="location reveal">
+					<img src="img/ceviche_location_icon.png" alt="location" />
+					<p>789 Bloor St West<br>
+						Toronto, ON</p>
+				</div>
+				<div class="time reveal">
+					<img src="img/ceviche_time_icon.png" alt="time" />
+					<p>10AM TO 12AM</p>
+				</div>
+			</section>
+
+			<section class="specials">
+				<h1 class="reveal">Specials</h1>
+				<div class="largeBox reveal">
+					<img src="img/hs_special_image_1.jpg" alt="White Bean Sandwich" />
+					<div class="reveal">
+						<h3>White Bean Sandwich</h3>
+						<h3 class="price">$5.99</h3>
+						<p>A vegetarian play on tuna salad</p>
+					</div>
+				</div>
+				<div class="smallBox reveal">
+					<div class="imageBox">
+						<img src="img/hs_special_image_2.jpg" alt="Muffins" />
+					</div>
+					<div class="textBox reveal">
+						<h3>Muffins</h3>
+						<h3 class="price">$2.99</h3>
+						<p>Muffins like a little bite of heaven</p>
+					</div>
+				</div>
+				<div class="smallBox reveal">
+					<div class="imageBox">
+						<img src="img/hs_special_image_3.jpg" alt="Waffles" />
+					</div>
+					<div class="textBox reveal">
+						<h3>Waffles</h3>
+						<h3 class="price">$7.99</h3>
+						<p>Blackberry waffles with compote</p>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="reservation">
+				<h1 class="reveal">Reservations</h1>
+				<div class="instructions reveal">
+					<h3>Please fill in the form below!</h3>
+				</div>
+				<form>
+					<p class="reveal">
+						<input type="text" name="name" placeholder="First and Last Name *">
+					</p>
+					<p class="reveal">
+						<select name="guests">
+							<option value="0">Select the number of guests... *</option>
+							<option value="1">1 Guest</option>
+							<option value="2">2 Guests</option>
+							<option value="3">3 Guests</option>
+							<option value="4">4 Guests</option>
+							<option value="5">5 Guests</option>
+							<option value="6">6 Guests</option>
+							<option value="7">7 Guests</option>
+							<option value="8">8 Guests</option>
+							<option value="9">9 Guests</option>
+							<option value="10+">10+ Guests</option>
+						</select>
+					</p>
+					<p class="reveal">
+						<input type="date" name="date" />
+					</p>
+					<p class="reveal">
+						<select name="time">
+							<option value="0">Select a time... *</option>
+							<option value="6:00 pm">6:00 pm</option>
+							<option value="6:30 pm">6:30 pm</option>
+							<option value="7:00 pm">7:00 pm</option>
+							<option value="7:30 pm">7:30 pm</option>
+							<option value="8:00 pm">8:00 pm</option>
+							<option value="8:30 pm">8:30 pm</option>
+							<option value="9:00 pm">9:00 pm</option>
+							<option value="9:30 pm">9:30 pm</option>
+						</select>
+					</p>
+					<p class="reveal">
+						<input type="text" name="phone" placeholder="Contact No. *">
+					</p>
+					<p class="reveal">
+						<textarea name="requests" rows="4" placeholder="Additional requests..."></textarea>
+					</p>
+					<div class="instructions error">
+						<h3>Please fill in the required fields.</h3>
+					</div>
+					<p class="reveal">
+						<input type="submit" class="reserve" name="Submit" />
+					</p>
+				</form>
+				<div class="confirmation">
+					<span>X</span>
+					<img src="img/confirmed_icon.png" alt="Reservation confirmed!" />
+					<h3>Reservation Confirmed!</h3>
+					<p>Thank you for making a reservation.</p>
+				</div>
+			</section>
+
+			<footer>
+				<div class="footerButtons homeIcon" data-section=".home">
+					<img src="img/home_icon.png" alt="home" />
+					<p>Home</p>
+				</div>
+				<div class="footerButtons specialsIcon" data-section=".specials">
+					<img src="img/specials_icon.png" alt="specials" />
+					<p>Specials</p>
+				</div>
+				<div class="footerButtons reserveIcon" data-section=".reservation">
+					<img src="img/reserve_icon.png" alt="reservations" />
+					<p>Reserve</p>
+				</div>
+			</footer>
+		</main>
+
+		<!-- restaurant 2 -->
+		<main id="rest2" class="rest">
+			<header>
+				<img class="header_logo" src="img/crispys_header_logo.svg" alt="Crispy's" />
+				<!-- <img class="header_logo" src="img/foe-wordmark.png" alt="Family of Eateries" /> -->
+				<img class="hamburgerMenu" src="img/hamburger.gif" alt="Menu" data-click-stat="1" />
+			</header>
+
+			<section class="home">
+				<h1 class="reveal">About Us</h1>
+				<p class="aboutText reveal">Our food is here to help overcome the hunger, conquer your appetite and
+					essentially bring happiness into your life once again. At Crispy’s, we want to relieve that
+					frustration and eliminate hunger by giving your stomach exactly what it needs: crispy, delicious,
+					mouth-watering burgers that hit the spot every time.</p>
+
+				<div class="location reveal">
+					<img src="img/crispys_location_icon.png" alt="location" />
+					<p>456 Bloor St West<br>
+						Toronto, ON</p>
+				</div>
+				<div class="time reveal">
+					<img src="img/crispys_time_icon.png" alt="time" />
+					<p>11AM TO 11PM</p>
+				</div>
+			</section>
+
+			<section class="specials">
+				<h1 class="reveal">Specials</h1>
+				<div class="largeBox reveal">
+					<img src="img/crispys_special_image_1.jpg" alt="The Classic Burger" />
+					<div class="reveal">
+						<h3>The Classic</h3>
+						<h3 class="price">$6.49</h3>
+						<p>Ketchup, mayonnaise, mustard, lettuce</p>
+					</div>
+				</div>
+				<div class="smallBox reveal">
+					<div class="imageBox">
+						<img src="img/crispys_special_image_2.jpg" alt="Steakhouse" />
+					</div>
+					<div class="textBox reveal">
+						<h3>Steakhouse</h3>
+						<h3 class="price">$9.49</h3>
+						<p>Seared beef patty with sautéed mushrooms</p>
+					</div>
+				</div>
+				<div class="smallBox reveal">
+					<div class="imageBox">
+						<img src="img/crispys_special_image_3.jpg" alt="Poutine" />
+					</div>
+					<div class="textBox reveal">
+						<h3>Poutine</h3>
+						<h3 class="price">$4.29</h3>
+						<p>Fries topped with Quebec cheese</p>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="reservation">
+				<h1 class="reveal">Reservations</h1>
+				<div class="instructions reveal">
+					<h3>Please fill in the form below!</h3>
+				</div>
+				<form>
+					<p class="reveal">
+						<input type="text" name="name" placeholder="First and Last Name *">
+					</p>
+					<p class="reveal">
+						<select name="guests">
+							<option value="0">Select the number of guests... *</option>
+							<option value="1">1 Guest</option>
+							<option value="2">2 Guests</option>
+							<option value="3">3 Guests</option>
+							<option value="4">4 Guests</option>
+							<option value="5">5 Guests</option>
+							<option value="6">6 Guests</option>
+							<option value="7">7 Guests</option>
+							<option value="8">8 Guests</option>
+							<option value="9">9 Guests</option>
+							<option value="10+">10+ Guests</option>
+						</select>
+					</p>
+					<p class="reveal">
+						<input type="date" name="date" />
+					</p>
+					<p class="reveal">
+						<select name="time">
+							<option value="0">Select a time... *</option>
+							<option value="6:00 pm">6:00 pm</option>
+							<option value="6:30 pm">6:30 pm</option>
+							<option value="7:00 pm">7:00 pm</option>
+							<option value="7:30 pm">7:30 pm</option>
+							<option value="8:00 pm">8:00 pm</option>
+							<option value="8:30 pm">8:30 pm</option>
+							<option value="9:00 pm">9:00 pm</option>
+							<option value="9:30 pm">9:30 pm</option>
+						</select>
+					</p>
+					<p class="reveal">
+						<input type="text" name="phone" placeholder="Contact No. *">
+					</p>
+					<p class="reveal">
+						<textarea name="requests" rows="4" placeholder="Additional requests..."></textarea>
+					</p>
+					<div class="instructions error">
+						<h3>Please fill in the required fields.</h3>
+					</div>
+					<p class="reveal">
+						<input type="submit" class="reserve" name="Submit" />
+					</p>
+				</form>
+				<div class="confirmation">
+					<span>X</span>
+					<img src="img/confirmed_icon.png" alt="Reservation confirmed!" />
+					<h3>Reservation Confirmed!</h3>
+					<p>Thank you for making a reservation.</p>
+				</div>
+			</section>
+
+			<footer>
+				<div class="footerButtons homeIcon" data-section=".home">
+					<img src="img/home_icon.png" alt="home" />
+					<p>Home</p>
+				</div>
+				<div class="footerButtons specialsIcon" data-section=".specials">
+					<img src="img/specials_icon.png" alt="specials" />
+					<p>Specials</p>
+				</div>
+				<div class="footerButtons reserveIcon" data-section=".reservation">
+					<img src="img/reserve_icon.png" alt="reservations" />
+					<p>Reserve</p>
+				</div>
+			</footer>
+		</main>
+
+		<!-- restaurant 3 -->
+		<main id="rest3" class="rest">
+			<header>
+				<img class="header_logo" src="img/ceviche_header_logo.svg" alt="Ceviche" />
+				<!-- <img class="header_logo" src="img/foe-wordmark.png" alt="Family of Eateries" /> -->
+				<img class="hamburgerMenu" src="img/hamburger.gif" alt="Menu" data-click-stat="1" />
+			</header>
+
+			<section class="home">
+				<h1 class="reveal">About Us</h1>
+				<p class="aboutText reveal">Ceviche opened its doors in January 2006,and in 2010 won the second star in
+					the Michelin Guide. Ceviche is much more than chef Muñoz Izquierdo’s gastronomic vision for
+					Barcelona. It is a spiritual project with the very best team of professionals at its forefront that
+					strives to delight its diners with every aroma and flavour.</p>
+
+				<div class="location reveal">
+					<img src="img/ceviche_location_icon.png" alt="location" />
+					<p>123 Bloor St West<br>
+						Toronto, ON</p>
+				</div>
+				<div class="time reveal">
+					<img src="img/ceviche_time_icon.png" alt="time" />
+					<p>4PM TO 11PM</p>
+				</div>
+			</section>
+
+			<section class="specials">
+				<h1 class="reveal">Specials</h1>
+				<div class="largeBox reveal">
+					<img src="img/ceviche_special_image_1.jpg" alt="Shrimp and Grits" />
+					<div class="reveal">
+						<h3>Shrimp and Grits</h3>
+						<h3 class="price">$8.99</h3>
+						<p>Perfect combo of shrimp and grits</p>
+					</div>
+				</div>
+				<div class="smallBox reveal">
+					<div class="imageBox">
+						<img src="img/ceviche_special_image_2.jpg" alt="Rossejat" />
+					</div>
+					<div class="textBox reveal">
+						<h3>Rossejat</h3>
+						<h3 class="price">$7.99</h3>
+						<p>Toasted noodlles with lobsters</p>
+					</div>
+				</div>
+				<div class="smallBox reveal">
+					<div class="imageBox">
+						<img src="img/ceviche_special_image_3.jpg" alt="Antipasto" />
+					</div>
+					<div class="textBox reveal">
+						<h3>Antipasto</h3>
+						<h3 class="price">$24.99</h3>
+						<p>Platter with cured meats and olives</p>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="reservation">
+				<h1 class="reveal">Reservations</h1>
+				<div class="instructions reveal">
+					<h3>Please fill in the form below!</h3>
+				</div>
+				<form>
+					<p class="reveal">
+						<input type="text" name="name" placeholder="First and Last Name *">
+					</p>
+					<p class="reveal">
+						<select name="guests">
+							<option value="0">Select the number of guests... *</option>
+							<option value="1">1 Guest</option>
+							<option value="2">2 Guests</option>
+							<option value="3">3 Guests</option>
+							<option value="4">4 Guests</option>
+							<option value="5">5 Guests</option>
+							<option value="6">6 Guests</option>
+							<option value="7">7 Guests</option>
+							<option value="8">8 Guests</option>
+							<option value="9">9 Guests</option>
+							<option value="10+">10+ Guests</option>
+						</select>
+					</p>
+					<p class="reveal">
+						<input type="date" name="date" />
+					</p>
+					<p class="reveal">
+						<select name="time">
+							<option value="0">Select a time... *</option>
+							<option value="6:00 pm">6:00 pm</option>
+							<option value="6:30 pm">6:30 pm</option>
+							<option value="7:00 pm">7:00 pm</option>
+							<option value="7:30 pm">7:30 pm</option>
+							<option value="8:00 pm">8:00 pm</option>
+							<option value="8:30 pm">8:30 pm</option>
+							<option value="9:00 pm">9:00 pm</option>
+							<option value="9:30 pm">9:30 pm</option>
+						</select>
+					</p>
+					<p class="reveal">
+						<input type="text" name="phone" placeholder="Contact No. *" />
+					</p>
+					<p class="reveal">
+						<textarea name="requests" rows="4" placeholder="Additional requests..."></textarea>
+					</p>
+					<div class="instructions error">
+						<h3>Please fill in the required fields.</h3>
+					</div>
+					<p class="reveal">
+						<input type="submit" class="reserve" name="Submit" />
+					</p>
+				</form>
+
+				<div class="confirmation">
+					<span>X</span>
+					<img src="img/confirmed_icon.png" alt="Reservation confirmed!" />
+					<h3>Reservation Confirmed!</h3>
+					<p>Thank you for making a reservation.</p>
+				</div>
+			</section>
+
+			<footer>
+				<div class="footerButtons homeIcon" data-section=".home">
+					<img src="img/home_icon.png" alt="home" />
+					<p>Home</p>
+				</div>
+				<div class="footerButtons specialsIcon" data-section=".specials">
+					<img src="img/specials_icon.png" alt="specials" />
+					<p>Specials</p>
+				</div>
+				<div class="footerButtons reserveIcon" data-section=".reservation">
+					<img src="img/reserve_icon.png" alt="reservations" />
+					<p>Reserve</p>
+				</div>
+			</footer>
+		</main>
+
+	</div>
+
+	<!-- link to main js file -->
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
