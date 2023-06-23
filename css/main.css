@@ -668,6 +668,14 @@ footer {
         font-size: 1rem;
     }
 
+    #intro {
+        min-height: 100vh;
+    }
+
+    #introBox {
+        min-width: 80vw;
+    }
+
     .project {
         flex: 0 0 43%;
         min-height: 400px;
@@ -749,7 +757,7 @@ footer {
     }
 
     #intro {
-        height: 100vh;
+        min-height: 100vh;
     }
 
     #intro .content {
