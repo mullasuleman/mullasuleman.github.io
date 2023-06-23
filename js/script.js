@@ -5,6 +5,11 @@ window.addEventListener("DOMContentLoaded", function () {
 		top: 0
 	}, 2000);
 
+	(function () {
+		// https://dashboard.emailjs.com/admin/account
+		emailjs.init('3cJAxWF0djjsGN5Uw');
+	})();
+
 	let contactForm = document.querySelector("#contactForm");
 	let messageStatus = document.querySelector("#messageStatus");
 
@@ -13,21 +18,14 @@ window.addEventListener("DOMContentLoaded", function () {
 		e.preventDefault();
 
 		// sending/fetching data from the server
-		let url = "services/send_message.php";
-		fetch(url, {
-			body: new FormData(e.target),
-			method: "post"
-		})
-			.then(response => response.json())
-			.then(message => {
-				if (message.code) {
-					messageStatus.innerText = "Message sent successfully!";
-				} else {
-					messageStatus.innerText = "There was a problem sending the message.";
-				}
-			}).catch(error => {
-				messageStatus.innerText = "There was a problem connecting to the server.";
-				
+		emailjs.sendForm('contact_service', 'contactForm', this)
+			.then(function () {
+				console.log('SUCCESS!');
+				messageStatus.innerHTML = "Message successfully sent!"
+			}, function (error) {
+				console.log('FAILED...', error);
+				messageStatus.innerHTML = "Something went wrong"
 			});
+
 	});
 });
