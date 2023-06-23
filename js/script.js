@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", function () {
 		e.preventDefault();
 
 		// sending/fetching data from the server
-		emailjs.send('contact_service', 'contactForm')
+		emailjs.send('contact_service', 'contact_form', this)
 			.then(function () {
 				console.log('SUCCESS!');
 				messageStatus.innerHTML = "Message successfully sent!"
