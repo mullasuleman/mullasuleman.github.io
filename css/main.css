@@ -320,6 +320,7 @@ body {
     padding: 40px 25px;
     overflow-y: scroll;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     background: url(../images/dots.svg);
     background-attachment: fixed;
@@ -331,6 +332,7 @@ body {
     margin: 20px;
     flex: 0 0 45%;
     /* min-height: 300px; */
+    max-width: 700px;
     height: auto;
     color: var(--fontColor);
     border: 2px solid var(--fontColor);
@@ -388,6 +390,7 @@ body {
     overflow-y: scroll;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     background: url(../images/dots.svg);
     background-attachment: fixed;
     background-position: center;
@@ -398,6 +401,7 @@ body {
     margin: 20px;
     flex: 0 0 45%;
     height: 300px;
+    max-width: 700px;
     color: var(--fontColor);
     border: 2px solid var(--fontColor);
     border-radius: 2px;
@@ -416,6 +420,7 @@ body {
     height: 100%;
     display: flex;
     justify-content: center;
+    background-color: var(--bgColor);
 }
 
 .project .mockup {
