@@ -1,4 +1,6 @@
 window.addEventListener("DOMContentLoaded", function () {
+	document.querySelector("#copyrightBox p span").innerHTML = new Date().getFullYear();
+
 	$("header").delay(1000).animate({
 		top: 0
 	}, 2000);
