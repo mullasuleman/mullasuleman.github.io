@@ -365,11 +365,15 @@ body {
 
 .skillList li {
     min-width: 50%;
+    position: relative;
+    padding-left: 30px;
+
 }
 
 .skillList li::before {
     content: "//";
-    margin-right: 20px;
+    position: absolute;
+    left: 0;
 }
 
 /* PROJECT SCREEN STYLES */
