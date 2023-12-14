@@ -465,6 +465,10 @@ body {
     font-size: 1rem;
 }
 
+.project .projectCatagory a {
+    color: inherit !important;
+}
+
 .project:hover>.projectCatagory {
     opacity: 1;
     top: 13%;
