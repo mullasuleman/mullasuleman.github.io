@@ -110,7 +110,7 @@ window.addEventListener("DOMContentLoaded", function () {
 				startAt: { filter: "brightness(100%), blur(0px)" },
 				filter: isLast ? "none" : "brightness(50%) blur(5px)",
 				scale: 0.9,
-				translateY: 300,
+				translateY: 100,
 				borderRadius: 40,
 			}, '<');
 		});
