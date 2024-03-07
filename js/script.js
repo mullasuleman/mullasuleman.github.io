@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", function () {
+	const dialog = document.querySelector("#dialog");
 	document.querySelector("#copyrightBox p span").innerHTML = new Date().getFullYear();
 
 	$("header").delay(1000).animate({
@@ -28,4 +29,35 @@ window.addEventListener("DOMContentLoaded", function () {
 			});
 
 	});
+
+	$(".unavail.projectLink").click((e) => {
+		e.preventDefault();
+		dialog.showModal();
+	});
+
+	$("#closeModal").click((e) => {
+		dialog.close();
+	});
+
+	function iOS() {
+		return [
+			'iPad Simulator',
+			'iPhone Simulator',
+			'iPod Simulator',
+			'iPad',
+			'iPhone',
+			'iPod'
+		].includes(navigator.userAgent)
+			// iPad on iOS 13 detection
+			|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+	}
+
+	if (iOS()) {
+		$(".project").click((e) => {
+			$(".project").removeClass("hover");
+			console.log("on");
+			console.log(e.currentTarget);
+			e.currentTarget.classList.add('hover')
+		})
+	}
 });

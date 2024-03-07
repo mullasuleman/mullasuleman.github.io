@@ -36,7 +36,7 @@ font-weights
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    transition: 0.5s;
+    /* transition: 0.5s; */
     /* border: 1px solid var(--fontColor); */
 }
 
@@ -214,7 +214,9 @@ body {
 @keyframes revealTitle {
     from {
         transform: translateY(100px) scale(3);
-    } to {
+    }
+
+    to {
         transform: translateY(0px) scale(1);
     }
 }
@@ -230,7 +232,9 @@ body {
     from {
         transform: translateY(200px);
         opacity: 0;
-    } to {
+    }
+
+    to {
         transform: translateY(0px);
         opacity: 1;
     }
@@ -401,6 +405,38 @@ body {
     background-position: center;
 }
 
+#projectBox #dialog {
+    margin: auto;
+    border: none;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    overflow: visible;
+    border-radius: 2px;
+}
+
+#projectBox #dialog p {
+    font-size: 1.1rem;
+}
+
+#projectBox #dialog #closeModal {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 3px 8px 5px;
+    background-color: #FF694D;
+    color: #383838;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+#dialog::backdrop {
+    background-color: rgb(0 0 0 / 25%);
+    backdrop-filter: blur(5px);
+}
+
+
 .project {
     position: relative;
     margin: 20px;
@@ -413,9 +449,19 @@ body {
     overflow: hidden;
     box-shadow: 5px 5px 2px rgba(156, 156, 156, 0.5);
     background: rgba(255, 255, 255, 0.5);
+    order: 1;
 }
 
-.project:hover {
+.project * {
+    transition: 0.5s;
+}
+
+.project:has(.unavail) {
+    order: 2;
+}
+
+.project:hover,
+.project.hover {
     box-shadow: 7px 7px 7px rgba(156, 156, 156, 0.7);
 }
 
@@ -434,7 +480,8 @@ body {
     transform: scale(1.3);
 }
 
-.project:hover .mockup {
+.project:hover .mockup,
+.project.hover .mockup {
     transform: scale(1.2);
 }
 
@@ -450,7 +497,8 @@ body {
     box-shadow: 0 -5px 10px rgba(56, 56, 56, 0.2);
 }
 
-.project:hover>.projectTitle {
+.project:hover>.projectTitle,
+.project.hover>.projectTitle {
     background-color: rgba(255, 255, 255, 0.9);
     transform: translateY(0px);
     top: 0%;
@@ -469,21 +517,22 @@ body {
     color: inherit !important;
 }
 
-.project:hover>.projectCatagory {
+.project:hover>.projectCatagory, 
+.project.hover>.projectCatagory {
     opacity: 1;
     top: 13%;
     transition-delay: 0.2s;
     transition-timing-function: ease-out;
 }
 
-.project >.projectCatagory:first-of-type {
+.project>.projectCatagory:first-of-type {
     color: var(--fontColor);
     font-style: italic;
     text-transform: lowercase;
     font-weight: 600;
 }
 
-.project >.projectCatagory:nth-of-type(3) {
+.project>.projectCatagory:nth-of-type(3) {
     font-weight: 600;
 }
 
@@ -500,7 +549,8 @@ body {
     font-size: 1.25rem;
 }
 
-.project:hover > .projectLink {
+.project:hover>.projectLink,
+.project.hover>.projectLink {
     bottom: 0;
 }
 
@@ -518,7 +568,7 @@ body {
     opacity: 1;
 }
 
-.emptyProj:hover > .projectCatagory {
+.emptyProj:hover>.projectCatagory {
     top: 50%;
 }
 
@@ -537,6 +587,13 @@ body {
     height: auto;
     margin: auto;
     /* overflow: scroll; */
+}
+
+#formBox input,
+#formBox textarea,
+#formBox button {
+    transition: background 0.25s,
+        box-shadow 0.25s;
 }
 
 #formBox form {
@@ -571,7 +628,9 @@ body {
     font-size: 1.2rem;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 2px;
-    box-shadow: 5px 5px 0 rgba(156, 156, 156, 0.7);
+    /* box-shadow: 5px 5px 0 rgba(156, 156, 156, 0.7); */
+    box-shadow: 7px 7px 7px rgba(156, 156, 156, 0.7);
+
     font-weight: 600;
     font-family: "sofia-pro", sans-serif;
 }
@@ -585,8 +644,13 @@ body {
 #formBox input:focus,
 #formBox textarea:focus {
     background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 7px 7px 7px rgba(156, 156, 156, 0.7);
+    /* box-shadow: 7px 7px 7px rgba(156, 156, 156, 0.7); */
+    box-shadow: 5px 5px 0 rgba(156, 156, 156, 0.7);
     outline: none;
+}
+
+#formBox button:active {
+    box-shadow: 5px 5px 0 rgba(156, 156, 156, 0.7);
 }
 
 #formBox textarea {
@@ -723,7 +787,8 @@ footer {
 
 /* On screens that are 600px or less, set the background color to olive */
 
-@media print, screen and (max-width: 40em) {
+@media print,
+screen and (max-width: 40em) {
     header {
         flex-direction: column;
         height: auto;
@@ -799,6 +864,10 @@ footer {
         flex: 0 0 100%;
         min-height: 360px;
         margin: 20px auto;
+    }
+
+    .project .projectCatagory {
+        font-size: 0.90rem;
     }
 
     .project .projectTitle {
