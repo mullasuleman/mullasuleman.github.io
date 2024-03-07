@@ -1,5 +1,6 @@
 window.addEventListener("DOMContentLoaded", function () {
 	const dialog = document.querySelector("#dialog");
+	const lenis = new Lenis();
 	document.querySelector("#copyrightBox p span").innerHTML = new Date().getFullYear();
 
 	$("header").delay(1000).animate({

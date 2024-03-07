@@ -2,7 +2,22 @@
 // determines the height of nav bar plus buffer
 var navOffset = $("header").innerHeight();
 // console.log(navOffset);
+var yPos = {};
+yPos = {
+	"#intro": 0,
+	"#work": getIdPosNav("#work"),
+	"#skills": getIdPosNav("#skills"),
+	"#contact": getIdPosNav("#contact")
+};
 
+function getIdPosNav(id) {
+	// finds the position of selected link/ID
+	if ($(window).innerWidth() < 599) {
+		return ($(id).offset().top - navOffset);
+	} else {
+		return $(id).offset().top;
+	}
+}
 
 // function for animated scroll on nav click
 $("header a[href^='#'], #scrollIcon").click(function (e) {
@@ -10,17 +25,15 @@ $("header a[href^='#'], #scrollIcon").click(function (e) {
 	// prevents browser from doing a default click
 	e.preventDefault();
 
-	// finds the position of selected link/ID
-	if ($(window).innerWidth() < 599) {
-		var idPosNav = $($(this).attr("href")).offset().top - navOffset;
-	} else {
-		var idPosNav = $($(this).attr("href")).offset().top;
-	}
+	// console.log(e.target.hash, yPos);
+	console.log(e.target.hash, yPos[e.target.hash]);
 
-	// animates to selected section position
-	$("body, html").animate({
-		scrollTop: idPosNav
-	}, 1000, "easeInOutQuad");
+	// // animates to selected section position
+	// $("body, html").animate({
+	// 	scrollTop: idPosNav
+	// }, 1000, "easeInOutQuad");
+	gsap.to(window, { duration: 2, scrollTo: yPos[e.target.hash] });
+
 
 });
 
@@ -48,7 +61,7 @@ $(window).scroll(function () {
 		} else {
 			var sectionTopPosition = $(this).offset().top;
 		}
-		
+
 		//finds the bottom of the section
 		var sectionBottomPosition = sectionTopPosition + $(this).innerHeight();
 
@@ -63,4 +76,47 @@ $(window).scroll(function () {
 			$("nav a[href='#" + sectionID + "']").removeClass("active");
 		}
 	});
+});
+
+
+
+window.addEventListener("DOMContentLoaded", function () {
+	// const lenis = new Lenis();
+	// lenis.on('scroll', ScrollTrigger.update)
+
+	// gsap.ticker.add((time) => {
+	// 	lenis.raf(time * 500)
+	// })
+
+	// gsap.ticker.lagSmoothing(0)
+
+	gsap.to(window, { duration: 0.1, scrollTo: 0 });
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	const createScroll01 = () => {
+		const panels = Array.from(document.querySelectorAll("section"));
+		panels.forEach((panel, index) => {
+			const isLast = index === panels.length - 1;
+
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: panel,
+					start: "top top",
+					scrub: 3,
+				}
+			}).to(panel, {
+				ease: "power1.out",
+				startAt: { filter: "brightness(100%), blur(0px)" },
+				filter: isLast ? "none" : "brightness(50%) blur(5px)",
+				scale: 0.9,
+				translateY: 300,
+				borderRadius: 40,
+			}, '<');
+		});
+	};
+
+	if ($(window).innerWidth() <= 810) return;
+
+	createScroll01();
 });
