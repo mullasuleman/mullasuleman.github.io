@@ -23,9 +23,15 @@ font-weights
     /* --bgColor: rgba(255, 255, 255, 0.5); */
     /* --bgColor: rgba(255, 255, 255, 0.2); */
     /* --fontColor: #383838; */
-    --fontColor: #fff;
-    --bgColor: #FF694D;
     /* rgba(255, 241, 200, 1) */
+
+    /* For switching colors */
+    /* --fontColor: #fff;
+    --bgColor: #FF694D; */
+
+    /* For consistant colors */
+    --fontColor: #FF694D;
+    --bgColor: #222;
 }
 
 ::-webkit-scrollbar {
@@ -49,6 +55,7 @@ body {
     /* font-family: "Saira", sans-serif; */
     font-family: "sofia-pro", sans-serif;
     /* overflow: hidden; */
+    background: var(--bgColor);
 }
 
 @media only screen and (max-width: 768px) {
@@ -99,7 +106,7 @@ nav {
 nav a {
     font-size: 1.1rem;
     font-weight: 600;
-    text-transform: lowercase;
+    text-transform: Uppercase;
     text-decoration: none;
     line-height: 1rem;
     letter-spacing: 0.5px;
@@ -107,9 +114,10 @@ nav a {
     /* padding: 0.125rem 0.75rem; */
     margin: 0 1.25rem;
     border-radius: 2px;
-    transition: all 0.5s;
+    transition: all 0.25s;
     transform-origin: bottom;
     border: 1px solid transparent;
+    vertical-align: middle;
 }
 
 nav a:hover,
@@ -117,8 +125,8 @@ nav a:hover,
     color: var(--bgColor);
     /* border: 1px solid var(--fontColor); */
     /* box-shadow: 0 2px 0 0 var(--fontColor); */
-    font-weight: 400;
-    transform: scale(1.5);
+    /* font-weight: 400; */
+    transform: scale(1.2);
     -webkit-text-fill-color: transparent;
     /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 0.7px;
@@ -360,7 +368,8 @@ body {
     border-radius: 2px;
     overflow: hidden;
     box-shadow: 5px 5px 2px rgba(156, 156, 156, 0.5);
-    background: rgba(255, 255, 255, 0.7);
+    /* background: rgba(255, 255, 255, 0.7); */
+    background: rgba(36, 36, 36, 0.7);
 }
 
 .skillImage img {
@@ -590,6 +599,9 @@ body {
 }
 
 /* Contact Page Styles */
+#contact {
+    max-height: 92vh;
+}
 
 #contact .content {
     display: flex;

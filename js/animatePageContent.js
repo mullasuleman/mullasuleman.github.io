@@ -26,13 +26,14 @@ $("header a[href^='#'], #scrollIcon").click(function (e) {
 	e.preventDefault();
 
 	// console.log(e.target.hash, yPos);
-	console.log(e.target.hash, yPos[e.target.hash]);
+	let hash = e.target.hash;
+	// console.log(hash, yPos[hash]);
 
 	// // animates to selected section position
 	// $("body, html").animate({
 	// 	scrollTop: idPosNav
 	// }, 1000, "easeInOutQuad");
-	gsap.to(window, { duration: 2, scrollTo: yPos[e.target.hash] });
+	gsap.to(window, { duration: 2, scrollTo: $(window).innerWidth() < 599 ? (getIdPosNav(hash)) : yPos[hash] });
 
 
 });
@@ -50,9 +51,13 @@ $(window).scroll(function () {
 	// assiging the position of the nav bottom to while the window scrolls
 	var topContentPosition = $(window).scrollTop() + navOffset;
 
-	// rgba(255, 241, 200, 1) yellow
-	let bgColors = ["#FF694D", "#fff", "#fff", "#222"];
-	let fgColors = ["#fff", "#FF694D", "#FF694D", "#FF694D"];
+	// // To switch colors
+	// let bgColors = ["#FF694D", "#fff", "#fff", "#222"];
+	// let fgColors = ["#fff", "#FF694D", "#FF694D", "#FF694D"];
+
+	// consistant colors
+	let bgColors = ["#222", "#222", "#222", "#222"];
+	let fgColors = ["#FF694D", "#FF694D", "#FF694D", "#FF694D"];
 
 	$("section").each(function (i) {
 		//finds the top of a section
