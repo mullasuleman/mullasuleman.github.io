@@ -103,13 +103,13 @@ window.addEventListener("DOMContentLoaded", function () {
 				scrollTrigger: {
 					trigger: panel,
 					start: "top top",
-					scrub: 3,
+					scrub: 2,
 				}
 			}).to(panel, {
 				ease: "power1.out",
 				startAt: { filter: "brightness(100%), blur(0px)" },
 				filter: isLast ? "none" : "brightness(50%) blur(5px)",
-				scale: 0.9,
+				scale: 0.8,
 				translateY: 100,
 				borderRadius: 40,
 			}, '<');
