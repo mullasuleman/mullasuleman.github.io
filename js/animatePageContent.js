@@ -108,14 +108,14 @@ window.addEventListener("DOMContentLoaded", function () {
 				scrollTrigger: {
 					trigger: panel,
 					start: "top top",
-					scrub: 2,
+					scrub: 0.5,
 				}
 			}).to(panel, {
-				ease: "power1.out",
+				ease: "none",
 				startAt: { filter: "brightness(100%), blur(0px)" },
-				filter: isLast ? "none" : "brightness(50%) blur(5px)",
+				filter: isLast ? "none" : "brightness(50%) blur(10px)",
 				scale: 0.8,
-				translateY: 100,
+				translateY: 50,
 				borderRadius: 40,
 			}, '<');
 		});
