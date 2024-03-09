@@ -772,9 +772,11 @@ footer {
     margin: 0 1rem;
     border-radius: 2px;
     transition: all 0.25s;
+    border: none !important;
 }
 
 .socialLink:hover {
+    border: none !important;
     color: var(--fontColor);
     background: var(--bgColor);
     transform: scale(1);
