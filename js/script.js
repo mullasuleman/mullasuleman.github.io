@@ -2,10 +2,6 @@ window.addEventListener("DOMContentLoaded", function () {
 	const dialog = document.querySelector("#dialog");
 	document.querySelector("#copyrightBox p span").innerHTML = new Date().getFullYear();
 
-	$("header").delay(1000).animate({
-		top: 0
-	}, 2000);
-
 	(function () {
 		// https://dashboard.emailjs.com/admin/account
 		emailjs.init('3cJAxWF0djjsGN5Uw');

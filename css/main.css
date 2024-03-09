@@ -2,16 +2,6 @@
 
 @import url("https://use.typekit.net/flv2fxa.css");
 
-@font-face {
-    font-family: "Bevan";
-    src: url("../fonts/Bevan-Regular.ttf");
-}
-
-@font-face {
-    font-family: "Saira";
-    src: url("../fonts/SairaStencilOne-Regular.ttf");
-}
-
 /* 
 font-weights
 400
@@ -52,7 +42,6 @@ html {
 }
 
 body {
-    /* font-family: "Saira", sans-serif; */
     font-family: "sofia-pro", sans-serif;
     /* overflow: hidden; */
     background: var(--bgColor);
@@ -229,10 +218,10 @@ body {
     letter-spacing: 2px;
     -webkit-text-fill-color: transparent;
     /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--fontColor);
     transform: translateY(100px) scale(3);
-    animation: revealTitle 1s forwards ease-in-out 1s;
+    animation: revealTitle 0.75s forwards ease-in-out 0.5s;
     transform-origin: left;
 }
 
@@ -250,7 +239,7 @@ body {
     font-size: 20px;
     color: var(--fontColor);
     opacity: 0;
-    animation: revealDesc 1s forwards ease-in 1.25s;
+    animation: revealDesc 0.75s forwards ease-in 0.75s;
 }
 
 @keyframes revealDesc {
@@ -268,6 +257,9 @@ body {
 #scrollIcon {
     display: block;
     margin-top: 50px;
+    width: 30px;
+    height: 50px;
+    background-color: rgba(34, 34, 34, 1);
 }
 
 .chevron {
@@ -398,13 +390,16 @@ body {
     min-width: 50%;
     position: relative;
     padding-left: 30px;
-
+    color: rgba(200, 200, 200, 1);
 }
 
 .skillList li::before {
     content: "//";
     position: absolute;
     left: 0;
+    font-size: 70%;
+    line-height: 200%;
+    color: #FF694D;
 }
 
 /* PROJECT SCREEN STYLES */
@@ -519,19 +514,21 @@ body {
     top: 78%;
     height: 100%;
     width: 100%;
+    padding: 0 10px;
     /* background-color: rgba(255, 255, 255, 0.7); */
     background-color: rgba(56, 56, 56, 0.8);
     color: rgba(200, 200, 200, 1);
-    padding: 0 10px;
     transform: translateY(26px);
     box-shadow: 0 -5px 10px rgba(56, 56, 56, 0.2);
 }
 
 .project:hover>.projectTitle,
 .project.hover>.projectTitle {
+    padding: 10px;
     top: 0%;
     transform: translateY(0px);
     background-color: rgba(56, 56, 56, 0.95);
+    font-size: 1.12rem;
 }
 
 .project .projectCatagory {
@@ -654,11 +651,42 @@ body {
     margin: 10px;
 }
 
+#formBox .formInput {
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+    
+}
+
+#formBox .formInput label {
+    color: #fff;
+    position: absolute;
+    top: 27px;
+    left: 17px;
+    font-size: 1.2rem;
+    color: #222;
+    transition: 0.25s;
+}
+
+#formBox .formInput input:focus+label,
+#formBox .formInput textarea:focus+label,
+#formBox .formInput input:not(:placeholder-shown)+label,
+#formBox .formInput textarea:not(:placeholder-shown)+label {
+    padding: 1px 10px;
+    top: -11px;
+    left: 0;
+    font-size: 0.9rem;
+    background-color: #FF694D;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
 #formBox input,
 #formBox textarea,
 #formBox button {
     width: 100%;
-    margin: 10px;
+    max-width: 100%;
+    margin: 10px 0;
     padding: 15px;
     border: 3px solid var(--fontColor);
     font-size: 1.2rem;
@@ -666,8 +694,8 @@ body {
     border-radius: 2px;
     /* box-shadow: 5px 5px 0 rgba(156, 156, 156, 0.7); */
     box-shadow: 7px 7px 7px rgba(156, 156, 156, 0.7);
-
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 400;
     font-family: "sofia-pro", sans-serif;
 }
 
@@ -790,7 +818,8 @@ footer {
         min-height: 100vh;
     }
 
-    #work, #skills {
+    #work,
+    #skills {
         height: auto;
     }
 
@@ -871,10 +900,6 @@ screen and (max-width: 40em) {
         display: none;
     }
 
-    #introDesc {
-        font-size: 16px;
-    }
-
     section {
         position: relative;
         min-height: 100vh;
@@ -899,12 +924,21 @@ screen and (max-width: 40em) {
     }
 
     #intro .content {
-        margin-top: 22vh;
+        margin-top: 18vh;
     }
 
     #introBox {
         max-width: 100vw;
-        margin-bottom: 8vh;
+        margin-bottom: 4vh;
+    }
+
+    #scrollIcon {
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    #introDesc {
+        font-size: 16px;
     }
 
     #skillBox,
@@ -921,6 +955,10 @@ screen and (max-width: 40em) {
     .skillList {
         flex-direction: column;
         flex-wrap: nowrap;
+    }
+
+    .skillList li {
+        font-size: 1.1rem;
     }
 
     .project {
@@ -944,6 +982,22 @@ screen and (max-width: 40em) {
     #formBox {
         width: 85%;
         margin: 20px auto;
+    }
+
+    #formBox .formInput label {
+        top: 22px;
+        left: 12px;
+        font-size: 1rem;
+    }
+    
+    #formBox .formInput input:focus+label,
+    #formBox .formInput textarea:focus+label,
+    #formBox .formInput input:not(:placeholder-shown)+label,
+    #formBox .formInput textarea:not(:placeholder-shown)+label {
+        padding: 1px 10px;
+        top: -10px;
+        font-size: 0.8rem;
+        background-color: #FF694D;
     }
 
     #formBox input,

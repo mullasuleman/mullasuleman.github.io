@@ -86,14 +86,12 @@ $(window).scroll(function () {
 
 
 window.addEventListener("DOMContentLoaded", function () {
-	// const lenis = new Lenis();
-	// lenis.on('scroll', ScrollTrigger.update)
 
-	// gsap.ticker.add((time) => {
-	// 	lenis.raf(time * 500)
-	// })
-
-	// gsap.ticker.lagSmoothing(0)
+	gsap.to(document.querySelector("header"), {
+		duration: 1,
+		delay: 0.5,
+		top: 0
+	});
 
 	gsap.to(window, { duration: 0.1, scrollTo: 0 });
 
@@ -117,6 +115,7 @@ window.addEventListener("DOMContentLoaded", function () {
 				scale: 0.8,
 				translateY: 50,
 				borderRadius: 40,
+				onComplete: () => { panel.querySelector("div[id$='Box']").scrollTop = 0; }
 			}, '<');
 		});
 	};

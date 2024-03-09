@@ -65,7 +65,7 @@
 						through the contact form below.</p>
 				</div>
 				<div>
-					<a id="scrollIcon">
+					<a id="scrollIcon" href="#work">
 						<div class="chevron"></div>
 						<div class="chevron"></div>
 						<div class="chevron"></div>
@@ -158,9 +158,9 @@
 						</div>
 						<h1 class="projectTitle">FilterBath</h1>
 						<p class="projectCatagory">// A JavaScript photobooth app</p>
-						<p class="projectCatagory">// FilterBath is a photobooth web app that uses the onboard camera of
-							the device to generate HTML canvas based images. It allows the user to process the image
-							using various filters, place stickers on the live image, and includes a green screen that
+						<p class="projectCatagory">// FilterBath is a photobooth web app that uses the device camera to generate
+							canvas based images. It allows the user to preview and customize the image
+							using various filters and stickers, and includes a "green screen" that
 							can be customized to create an image with a custom background by adjusting the backdrop
 							colors.</p>
 						<p class="projectCatagory">// HTML5, CSS, JavaScript (ES6)</p>
@@ -175,7 +175,7 @@
 						<p class="projectCatagory">// Easy Groceries is a dynamic groceries site developed to
 							demonstrate a site backed by a database and creating data endpoints using Object Oriented
 							PHP to interface with the front end.</p>
-						<p class="projectCatagory">// HTML, CSS, jQuery, Foundations, Photoshop, PHP, MySQL/</p>
+						<p class="projectCatagory">// HTML, CSS, jQuery, Foundations, Photoshop, PHP, MySQL</p>
 						<a href="./projects/easy-groceries/" class="projectLink unavail" target="_blank">View Project</a>
 					</div>
 					<div class="project">
@@ -238,15 +238,13 @@
 							<img src="./images/skill-web.jpg" alt="Web Skills">
 						</div> -->
 						<ul class="skillList">
+							<li>Foundations</li>
+							<li>Bootstrap</li>
 							<li>jQuery</li>
 							<li>Vue.js</li>
-							<!-- <li>React</li> -->
-							<!-- <li>TypeScript</li> -->
-							<li>Foundations</li>
 							<li>GSAP</li>
 							<li>SASS</li>
 							<li>Three.js</li>
-							<li>WordPress</li>
 						</ul>
 					</div>
 					<div class="skillSet">
@@ -261,7 +259,7 @@
 						</ul>
 					</div>
 					<div class="skillSet">
-						<h1 class="skillTitle">Adobe Creative Cloud</h1>
+						<h1 class="skillTitle">Creative Tools</h1>
 						<!-- <div class="skillImage">
 							<img src="./images/skill-web.jpg" alt="Web Skills">
 						</div> -->
@@ -270,6 +268,7 @@
 							<li>Illustrator</li>
 							<li>XD</li>
 							<li>Lightroom</li>
+							<li>Figma</li>
 							<!-- <li>Premiere Pro</li>
 							<li>Audition</li> -->
 						</ul>
@@ -295,6 +294,7 @@
 							<li>Analytics</li>
 							<li>AdMob</li>
 							<li>AdSense</li>
+							<li>AppSheet</li>
 							<li>Search Console</li>
 							<li>Merchant Centre</li>
 						</ul>
@@ -307,6 +307,7 @@
 						<ul class="skillList">
 							<li>GitHub</li>
 							<li>npm</li>
+							<li>WordPress</li>
 							<li>Squarespace</li>
 							<li>Shopify</li>
 						</ul>
@@ -327,10 +328,22 @@
 				<div id="formBox">
 					<p id="formMessage"> Leave me a message.</p>
 					<form id="contactForm">
-						<input type="text" name="name" id="name" placeholder="Name *" required>
-						<input type="text" name="email" id="email" placeholder="Email *" required>
-						<input type="text" name="phone" id="phone" placeholder="Contact No">
-						<textarea name="message" id="message" placeholder="Your message... *" required></textarea>
+						<div class="formInput">
+							<input type="text" name="name" id="name" placeholder=" " required>
+							<label for="name">Name *</label>
+						</div>
+						<div class="formInput">
+							<input type="text" name="email" id="email" placeholder=" " required>
+							<label for="email">Email *</label>
+						</div>
+						<div class="formInput">
+							<input type="text" name="phone" id="phone" placeholder=" ">
+							<label for="phone">Contact No</label>
+						</div>
+						<div class="formInput">
+							<textarea name="message" id="message" placeholder=" " required></textarea>
+							<label for="message">Your message*</label>
+						</div>
 						<p id="formNote">* Required</p>
 						<button type="submit" id="submit">Send</button>
 						<p id="messageStatus"></p>
