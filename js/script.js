@@ -14,6 +14,9 @@ window.addEventListener("DOMContentLoaded", function () {
 	contactForm.addEventListener("submit", function (e) {
 		e.preventDefault();
 
+		// robot trap
+		if (this.querySelector("#address").value != '') return;
+
 		// sending/fetching data from the server
 		emailjs.sendForm('contact_service', 'contact_form', this)
 			.then(function () {
@@ -23,7 +26,6 @@ window.addEventListener("DOMContentLoaded", function () {
 				console.log('FAILED...', error);
 				messageStatus.innerHTML = "Something went wrong"
 			});
-
 	});
 
 	$(".unavail.projectLink").click((e) => {
