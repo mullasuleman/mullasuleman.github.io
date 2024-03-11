@@ -10,6 +10,38 @@ yPos = {
 	"#contact": getIdPosNav("#contact")
 };
 
+// // consistant colors
+// let bgColors = ["#222", "#222", "#222", "#222"];
+// let fgColors = ["#FF694D", "#FF694D", "#FF694D", "#FF694D"];
+
+// To switch colors
+let bgColors = ["#222", "#222", "#222", "#222"];
+let fgColors = ["#FF694D", "#4dffd8", "#adff6a", "#b791ff"];
+
+let rand = Math.random() * (bgColors.length);
+let i = Math.floor(rand);
+
+document.documentElement.style.setProperty(`--bgColor`, bgColors[i]);
+document.documentElement.style.setProperty(`--fontColor`, fgColors[i]);
+$("#themeColor").attr("content", bgColors[i]);
+
+
+function scrollDetect() {
+	var lastScroll = 0;
+
+	window.onscroll = function () {
+		let currentScroll = document.documentElement.scrollTop || document.body.scrollTop; // Get Current Scroll Value
+
+		if (currentScroll > 0 && lastScroll <= currentScroll) {
+			lastScroll = currentScroll;
+			return "down";
+		} else {
+			lastScroll = currentScroll;
+			return "up";
+		}
+	};
+}
+
 function getIdPosNav(id) {
 	// finds the position of selected link/ID
 	if ($(window).innerWidth() < 599) {
@@ -44,20 +76,20 @@ $(window).scroll(function () {
 
 	if ($(window).scrollTop() > 1) {
 		$("header").css("box-shadow", '0 2px 5px rgba(56, 56, 56, 0.2)');
+		if ($(window).innerWidth() < 599) {
+			$("#logo").css("font-size", '1.7rem').css("padding-top", "0.5rem");
+			$("header nav").css("padding-top", '0.5rem');
+		}
 	} else {
 		$("header").css("box-shadow", 'none');
+		if ($(window).innerWidth() < 599) {
+			$("#logo").css("font-size", '2rem').css("padding-top", "1rem");
+			$("header nav").css("padding-top", '1rem');
+		}
 	}
 
 	// assiging the position of the nav bottom to while the window scrolls
 	var topContentPosition = $(window).scrollTop() + navOffset;
-
-	// // To switch colors
-	// let bgColors = ["#FF694D", "#fff", "#fff", "#222"];
-	// let fgColors = ["#fff", "#FF694D", "#FF694D", "#FF694D"];
-
-	// consistant colors
-	let bgColors = ["#222", "#222", "#222", "#222"];
-	let fgColors = ["#FF694D", "#FF694D", "#FF694D", "#FF694D"];
 
 	$("section").each(function (i) {
 		//finds the top of a section
@@ -74,9 +106,7 @@ $(window).scroll(function () {
 
 		if (topContentPosition >= sectionTopPosition && topContentPosition <= sectionBottomPosition) {
 			$("nav a[href='#" + sectionID + "']").addClass("active");
-			document.documentElement.style.setProperty(`--bgColor`, bgColors[i]);
-			document.documentElement.style.setProperty(`--fontColor`, fgColors[i]);
-			$("#themeColor").attr("content", bgColors[i]);
+
 		} else {
 			$("nav a[href='#" + sectionID + "']").removeClass("active");
 		}
