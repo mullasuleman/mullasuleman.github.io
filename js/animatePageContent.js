@@ -25,27 +25,10 @@ document.documentElement.style.setProperty(`--bgColor`, bgColors[i]);
 document.documentElement.style.setProperty(`--fontColor`, fgColors[i]);
 $("#themeColor").attr("content", bgColors[i]);
 
-
-function scrollDetect() {
-	var lastScroll = 0;
-
-	window.onscroll = function () {
-		let currentScroll = document.documentElement.scrollTop || document.body.scrollTop; // Get Current Scroll Value
-
-		if (currentScroll > 0 && lastScroll <= currentScroll) {
-			lastScroll = currentScroll;
-			return "down";
-		} else {
-			lastScroll = currentScroll;
-			return "up";
-		}
-	};
-}
-
 function getIdPosNav(id) {
 	// finds the position of selected link/ID
 	if ($(window).innerWidth() < 599) {
-		return ($(id).offset().top - navOffset);
+		return ($(id).offset().top - navOffset + 14);
 	} else {
 		return $(id).offset().top;
 	}
@@ -53,21 +36,9 @@ function getIdPosNav(id) {
 
 // function for animated scroll on nav click
 $("header a[href^='#'], #scrollIcon").click(function (e) {
-
-	// prevents browser from doing a default click
 	e.preventDefault();
-
-	// console.log(e.target.hash, yPos);
 	let hash = e.target.hash;
-	// console.log(hash, yPos[hash]);
-
-	// // animates to selected section position
-	// $("body, html").animate({
-	// 	scrollTop: idPosNav
-	// }, 1000, "easeInOutQuad");
 	gsap.to(window, { duration: 2, scrollTo: $(window).innerWidth() < 599 ? (getIdPosNav(hash)) : yPos[hash] });
-
-
 });
 
 // function that runs as user scrolls //////////////////////////
@@ -75,7 +46,7 @@ $("header a[href^='#'], #scrollIcon").click(function (e) {
 $(window).scroll(function () {
 
 	if ($(window).scrollTop() > 1) {
-		$("header").css("box-shadow", '0 2px 5px rgba(56, 56, 56, 0.2)');
+		$("header").css("box-shadow", '0 2px 5px rgba(100, 100, 100, 0.1)');
 		if ($(window).innerWidth() < 599) {
 			$("#logo").css("font-size", '1.7rem').css("padding-top", "0.5rem");
 			$("header nav").css("padding-top", '0.5rem');
