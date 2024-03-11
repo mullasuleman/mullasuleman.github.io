@@ -118,7 +118,7 @@ nav a {
     border-radius: 2px;
     transition: all 0.25s;
     transform-origin: bottom;
-    border: 3px solid transparent;
+    border: 2px solid transparent;
     vertical-align: middle;
 }
 
