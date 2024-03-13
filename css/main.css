@@ -1010,7 +1010,7 @@ screen and (max-width: 40em) {
     #formBox .formInput input:not(:placeholder-shown)+label,
     #formBox .formInput textarea:not(:placeholder-shown)+label {
         padding: 1px 10px;
-        top: -10px;
+        top: -8px;
         font-size: 0.8rem;
     }
 
