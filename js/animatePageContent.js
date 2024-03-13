@@ -16,7 +16,7 @@ yPos = {
 
 // To switch colors
 let bgColors = ["#222", "#222", "#222", "#222"];
-let fgColors = ["#FF694D", "#4dffd8", "#adff6a", "#b791ff"];
+let fgColors = ["#FF694D", "#FFF", "#adff6a", "#b791ff"];
 
 let rand = Math.random() * (bgColors.length);
 let i = Math.floor(rand);
