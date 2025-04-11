@@ -13,6 +13,7 @@ Adds utilities to Salesforce Marketing Cloud Engagement (SFMC) and Marketing Clo
   - Sample CSV: [Sample_File_DE_Blank.csv](https://github.com/mullasuleman/SFMC_Console_Toolset/blob/main/assets/Sample_File_DE_Blank.csv)
 - __Copy SQL (all fields)__
   - Copies an SQL query to the clipboard for the data extension that's currently open.
+
 ### SFMC-E > Query Studio 
 - __Select/Copy fields form Data Extension Search results__
   - Use existing Object Explorer tool available in Query Studio to search for a Data Extension.
@@ -27,6 +28,7 @@ Adds utilities to Salesforce Marketing Cloud Engagement (SFMC) and Marketing Clo
 - __Query Type Assist (Code suggestion)__
   - Data view type assist provides code suggestions as you type. It suggests data views as well as attributes. 
   - If a custom alias is defined for any data view, code suggestion will use that alias.
+
 ### Account Engagement > Settings 
 - __Download Salesforce fields available for sync on Prospect, Account, and Opportunity objects__
   - When adding a new custom field, a download icon will appear next to the sync/refresh icon. This will download all Salesforce.com fields currently available to sync with Prospect, Account, or Opportunity Parodot/MCAE field.
