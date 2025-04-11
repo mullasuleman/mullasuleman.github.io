@@ -32,8 +32,3 @@ Adds utilities to Salesforce Marketing Cloud Engagement (SFMC) and Marketing Clo
   - When adding a new custom field, a download icon will appear next to the sync/refresh icon. This will download all Salesforce.com fields currently available to sync with Prospect, Account, or Opportunity Parodot/MCAE field.
 - __CSV Export for Prospect fields__
   - While viewing Prospect Fields, a "CVS Export" button will be added to next to "Add Custom Field" button. This will download a CSV containing all default and custom Prosect field (including field name, API name, CRM field name, type, and last updated date)
-<!---
-# Download
-Firefox: [Download](download/salt-pepper-sfmc-ff-1.0.zip)
-[//]: # Chrome/Edge: [Download](download/salt-pepper-sfmc-1.0.crx)
--->
