@@ -25,7 +25,7 @@ Adds utilities to Salesforce Marketing Cloud Engagement (SFMC) and Marketing Clo
   - Use Copy All button to copy fields selected across different data views.
   - Copied fields will include an alias. For instance `_Click.EventDate` or `_Sent.EventDate`. No need to manually add aliases to differentiate the fields.
   - Set a custom alias for each data view as per your liking. For instance, `c.EventDate` for _Click data view and `s.EventDate` for _Sent data view.
-- __Query Type Assist (Code suggestion)__
+- __Query Type Assist (Code suggestion) - BETA__
   - Data view type assist provides code suggestions as you type. It suggests data views as well as attributes. 
   - If a custom alias is defined for any data view, code suggestion will use that alias.
 
