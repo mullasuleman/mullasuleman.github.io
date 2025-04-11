@@ -5,12 +5,12 @@ Adds utilities to Salesforce Marketing Cloud Engagement (SFMC) and Marketing Clo
 ### SFMC-E > Email Studio > Data Extensions
 - __Download Data Extension Schema__
   - Downloads a csv file that includes DE Path, Name, External Key, Fields, Field Type, Field Length, Primary Key, Nullable, and Default Value
-  - Sample CSV: [Sample_File_DE_Schema.csv](https://github.com/mullasuleman/SFMC_Console_Toolset/blob/main/assets/Sample_File_DE_Schema.csv)
+  - Sample CSV: [Sample_File_DE_Schema.csv](Sample_File_DE_Schema.csv)
 - __Download Blank CSV with Data Extension fields as headers__
   - Sometimes you just want to quickly import some records into a DE but you have to create a csv file form scratch and add DE fields manually. Use this to download a blank csv with all DE headers, populate with data and import.
   - Use as a sample file for field mapping when setting up an import activity in Automation Studio
   - Use as a sample file for field mapping when setting up an import definition in Contact Builder
-  - Sample CSV: [Sample_File_DE_Blank.csv](https://github.com/mullasuleman/SFMC_Console_Toolset/blob/main/assets/Sample_File_DE_Blank.csv)
+  - Sample CSV: [Sample_File_DE_Blank.csv](Sample_File_DE_Blank.csv)
 - __Copy SQL (all fields)__
   - Copies an SQL query to the clipboard for the data extension that's currently open.
 
