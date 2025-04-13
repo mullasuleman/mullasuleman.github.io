@@ -1,5 +1,5 @@
 ![Salt&Pepper for SFMC](images/sp-icon-128.png)
-# What is this?
+# What is Salt & Pepper for SFMC?
 Adds utilities to Salesforce Marketing Cloud Engagement (SFMC) and Marketing Cloud Account Engagement (MCAE, Pardot)
 # Tools
 ### SFMC-E > Email Studio > Data Extensions
