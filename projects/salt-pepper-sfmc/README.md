@@ -41,4 +41,4 @@ Adds utilities to Salesforce Marketing Cloud Engagement (SFMC) and Marketing Clo
 [![FireFox - Get the Add-on](https://extensionworkshop.com/assets/img/documentation/publish/get-the-addon-178x60px.dad84b42.png 'FireFox - Get the Add-on')](https://addons.mozilla.org/en-US/firefox/addon/salt-pepper-for-sfmc/)
 
 #### Privacy Disclaimer
-This extension does not store or transfer any data locally or to any external platform.
+This extension does not collect, store or transfer any data locally or to any external platform.
