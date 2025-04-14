@@ -37,7 +37,7 @@ Salt & Pepper for SFMC is a browser extension that adds utilities to Salesforce 
   - While viewing Prospect Fields, a "CVS Export" button will be added next to the "Add Custom Field" button. This will download a CSV containing all default and custom Prosect fields (including field name, API name, CRM field name, type, and last updated date)
 
 #### Downloads
-<!-- [![Available in the Chrome Web Store](https://developer.chrome.com/static/docs/webstore/branding/image/iNEddTyWiMfLSwFD6qGq.png 'Available in the Chrome Web Store')](https://mullasuleman.com/projects/salt-pepper-sfmc/) -->
+[![Available in the Chrome Web Store](https://developer.chrome.com/static/docs/webstore/branding/image/iNEddTyWiMfLSwFD6qGq.png 'Available in the Chrome Web Store')](https://chromewebstore.google.com/detail/salt-pepper-for-sfmc/kaepngbmnmbbaihkldlepffifhjgkefn)
 
 [![FireFox - Get the Add-on](https://extensionworkshop.com/assets/img/documentation/publish/get-the-addon-178x60px.dad84b42.png 'FireFox - Get the Add-on')](https://addons.mozilla.org/en-US/firefox/addon/salt-pepper-for-sfmc/)
 
