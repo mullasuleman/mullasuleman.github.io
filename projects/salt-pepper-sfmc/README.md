@@ -32,7 +32,7 @@ Salt & Pepper for SFMC is a browser extension that adds utilities to Salesforce 
 
 ### Account Engagement > Settings 
 - __Download Salesforce fields available for sync on Prospect, Account, and Opportunity objects__
-  - When adding a new custom field, a download icon will appear next to the sync/refresh icon. This will download all Salesforce.com fields currently available to sync with the Prospect, Account, or Opportunity Parodot/MCAE field.
+  - When adding a new custom field, a download icon will appear next to the sync/refresh icon. This will download all Salesforce.com fields currently available to sync with the Prospect, Account, or Opportunity Pardot/MCAE field.
 - __CSV Export for Prospect fields__
   - While viewing Prospect Fields, a "CVS Export" button will be added next to the "Add Custom Field" button. This will download a CSV containing all default and custom Prosect fields (including field name, API name, CRM field name, type, and last updated date)
 
