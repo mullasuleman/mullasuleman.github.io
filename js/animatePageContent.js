@@ -23,6 +23,7 @@ let i = Math.floor(rand);
 
 document.documentElement.style.setProperty(`--bgColor`, bgColors[i]);
 document.documentElement.style.setProperty(`--fontColor`, fgColors[i]);
+document.querySelector(`rel="icon"`).setAttribute(`href`, `/images/favicon_${fgColors[i].replace("#", "")}.ico`);
 $("#themeColor").attr("content", bgColors[i]);
 
 function getIdPosNav(id) {
