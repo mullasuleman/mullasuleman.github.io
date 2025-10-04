@@ -741,14 +741,8 @@ body {
 #formBox .g-recaptcha {
     margin: 15px auto;
     width: 100%;
-}
-
-#formBox .g-recaptcha>div {
-    max-width: 242px;
-}
-
-#formBox .g-recaptcha iframe {
-    max-width: 242px;
+    display: flex;
+    justify-content: center;
 }
 
 #formBox button {
@@ -891,6 +885,14 @@ footer {
     #formBox button {
         padding: 15px;
         font-size: 1.2rem;
+    }
+
+    #formBox .g-recaptcha>div {
+        max-width: 242px;
+    }
+
+    #formBox .g-recaptcha iframe {
+        max-width: 242px;
     }
 }
 
