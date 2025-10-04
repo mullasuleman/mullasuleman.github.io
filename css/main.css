@@ -738,6 +738,18 @@ body {
     margin: 15px auto;
 }
 
+#formBox .g-recaptcha {
+    margin: 15px auto;
+}
+
+#formBox .g-recaptcha>div {
+    max-width: 242px;
+}
+
+#formBox .g-recaptcha iframe {
+    max-width: 242px;
+}
+
 #formBox button {
     margin-top: 0;
     cursor: pointer;
