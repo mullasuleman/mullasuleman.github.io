@@ -734,6 +734,10 @@ body {
     height: 200px;
 }
 
+#formBox .g-recaptcha {
+    margin: 15px autos;
+}
+
 #formBox button {
     margin-top: 0;
     cursor: pointer;
