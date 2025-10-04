@@ -29,6 +29,14 @@
 		integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+	<!-- recaptcha -->
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script>
+		function onSubmit(token) {
+			document.getElementById("contactForm").submit();
+		}
+	</script>
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-WK1EDZFY4K"></script>
 	<script>
@@ -365,9 +373,11 @@
 						</div>
 						<input type="hidden" name="address" id="address">
 						<p id="formNote">* Required</p>
-						<div class="g-recaptcha" data-sitekey="6LdvhN4rAAAAAB6e7GvWzvWcMtFCrxROeoRBumCp"></div>
-						<br />
-						<button type="submit" id="submit">Send</button>
+						<!-- <div class="g-recaptcha" data-sitekey="6LdvhN4rAAAAAB6e7GvWzvWcMtFCrxROeoRBumCp"></div> -->
+						<!-- <br /> -->
+						<button type="submit" id="submit" class="g-recaptcha"
+							data-sitekey="6LdvhN4rAAAAAB6e7GvWzvWcMtFCrxROeoRBumCp"
+							data-callback="onSubmit">Send</button>
 						<p id="messageStatus"></p>
 					</form>
 				</div>
