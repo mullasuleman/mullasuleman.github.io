@@ -735,7 +735,7 @@ body {
 }
 
 #formBox .g-recaptcha {
-    margin: 15px autos;
+    margin: 15px auto;
 }
 
 #formBox button {
