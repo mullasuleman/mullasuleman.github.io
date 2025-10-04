@@ -740,6 +740,7 @@ body {
 
 #formBox .g-recaptcha {
     margin: 15px auto;
+    width: 100%;
 }
 
 #formBox .g-recaptcha>div {
