@@ -192,7 +192,6 @@ aside {
 .content {
     position: absolute;
     top: 10vh;
-    bottom: 0;
     height: 90vh;
     width: 92vw;
     margin-left: 8vw;
@@ -621,6 +620,9 @@ body {
 }
 
 #contact .content {
+    bottom: 0;
+    height: auto;
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     background: url(../images/dots.svg);
@@ -846,8 +848,10 @@ footer {
     }
 
     #work,
-    #skills {
+    #skills,
+    #contact {
         height: auto;
+        max-height: fit-content;
     }
 
     #introBox {
