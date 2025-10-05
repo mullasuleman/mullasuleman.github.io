@@ -192,6 +192,7 @@ aside {
 .content {
     position: absolute;
     top: 10vh;
+    bottom: 0;
     height: 90vh;
     width: 92vw;
     margin-left: 8vw;
