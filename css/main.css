@@ -848,10 +848,8 @@ footer {
     }
 
     #work,
-    #skills,
-    #contact {
+    #skills {
         height: auto;
-        max-height: fit-content;
     }
 
     #introBox {
@@ -964,6 +962,10 @@ screen and (max-width: 40em) {
 
     #intro .content {
         margin-top: 18vh;
+    }
+    
+    #contact {
+        max-height: fit-content;
     }
 
     #introBox {
