@@ -887,13 +887,13 @@ footer {
         font-size: 1.2rem;
     }
 
-    #formBox .g-recaptcha>div {
+    /* #formBox .g-recaptcha>div {
         max-width: 242px;
     }
 
     #formBox .g-recaptcha iframe {
         max-width: 242px;
-    }
+    } */
 }
 
 /* On screens that are 600px or less, set the background color to olive */
