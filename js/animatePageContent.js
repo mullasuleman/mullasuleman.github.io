@@ -10,6 +10,10 @@ yPos = {
 	"#contact": getIdPosNav("#contact")
 };
 
+function isMobile() {
+	return $(window).innerWidth() < 599;
+}
+
 // // consistant colors
 // let bgColors = ["#222", "#222", "#222", "#222"];
 // let fgColors = ["#FF694D", "#FF694D", "#FF694D", "#FF694D"];
@@ -28,7 +32,7 @@ $("#themeColor").attr("content", bgColors[i]);
 
 function getIdPosNav(id) {
 	// finds the position of selected link/ID
-	if ($(window).innerWidth() < 599) {
+	if (isMobile()) {
 		return ($(id).offset().top - navOffset + 14);
 	} else {
 		return $(id).offset().top;
@@ -39,7 +43,9 @@ function getIdPosNav(id) {
 $("header a[href^='#'], #scrollIcon").click(function (e) {
 	e.preventDefault();
 	let hash = e.target.hash;
-	gsap.to($(window).innerWidth() < 599 ? window : "main", { duration: 2, scrollTo: $(window).innerWidth() < 599 ? (getIdPosNav(hash)) : yPos[hash] });
+	gsap.to(isMobile() ? window : "main", { 
+		duration: isMobile() ? 2 : 1, 
+		scrollTo: isMobile() ? (getIdPosNav(hash)) : yPos[hash] });
 	$("header a[href^='#']").removeClass("active");
 	$(this).addClass("active");
 });
@@ -50,24 +56,24 @@ $(window).scroll(function () {
 
 	if ($(window).scrollTop() > 1) {
 		$("header").css("box-shadow", '0 2px 5px rgba(100, 100, 100, 0.1)');
-		if ($(window).innerWidth() < 599) {
+		if (isMobile()) {
 			$("#logo").css("font-size", '1.7rem').css("padding-top", "0.5rem");
 			$("header nav").css("padding-top", '0.5rem');
 		}
 	} else {
 		$("header").css("box-shadow", 'none');
-		if ($(window).innerWidth() < 599) {
+		if (isMobile()) {
 			$("#logo").css("font-size", '2rem').css("padding-top", "1rem");
 			$("header nav").css("padding-top", '1rem');
 		}
 	}
 
 	// assiging the position of the nav bottom to while the window scrolls
-	var topContentPosition = $($(window).innerWidth() < 599 ? window : "main").scrollTop() + navOffset;
+	var topContentPosition = $(isMobile() ? window : "main").scrollTop() + navOffset;
 
 	$("section").each(function (i) {
 		//finds the top of a section
-		if ($(window).innerWidth() < 599) {
+		if (isMobile()) {
 			var sectionTopPosition = $(this).offset().top - 10;
 		} else {
 			var sectionTopPosition = $(this).offset().top;
@@ -131,7 +137,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 window.addEventListener('resize', function(event){
 	navOffset = $("header").innerHeight();
-	gsap.to($(window).innerWidth() < 599 ? window : "main", { duration: 0.2, scrollTo: 0 });
+	gsap.to(isMobile() ? window : "main", { duration: 0.2, scrollTo: 0 });
 	setTimeout(function() {
 		yPos = {
 			"#intro": 0,
