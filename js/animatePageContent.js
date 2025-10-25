@@ -129,6 +129,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 window.addEventListener('resize', function(event){
 	navOffset = $("header").innerHeight();
+	gsap.to($(window).innerWidth() < 599 ? window : "main", { duration: 0.2, scrollTo: 0 });
 	yPos = {
 		"#intro": 0,
 		"#work": getIdPosNav("#work"),
