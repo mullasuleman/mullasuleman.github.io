@@ -128,6 +128,7 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 window.addEventListener('resize', function(event){
+	navOffset = $("header").innerHeight();
 	yPos = {
 		"#intro": 0,
 		"#work": getIdPosNav("#work"),
