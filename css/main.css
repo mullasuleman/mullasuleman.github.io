@@ -872,7 +872,7 @@ footer {
 
     .project .projectTitle {
         margin-top: auto;
-        top: 82%;
+        top: 81%;
     }
 
     .emptyProj {
@@ -886,8 +886,12 @@ footer {
     #formBox input,
     #formBox textarea,
     #formBox button {
-        padding: 15px;
+        padding: 10px;
         font-size: 1.2rem;
+    }
+
+    #formBox button {
+        padding: 10px 50px;
     }
 
     /* #formBox .g-recaptcha>div {
@@ -1013,7 +1017,7 @@ screen and (max-width: 40em) {
     }
 
     .project .projectTitle {
-        top: 82%;
+        top: 79%;
     }
 
     .emptyProj {

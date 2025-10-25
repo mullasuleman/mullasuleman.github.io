@@ -59,3 +59,7 @@ window.addEventListener("DOMContentLoaded", function () {
 		})
 	}
 });
+
+window.addEventListener('resize', function(event){
+  window.location.reload();
+});
