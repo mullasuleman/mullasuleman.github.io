@@ -139,6 +139,8 @@ nav a.active {
 
 main {
     position: relative;
+    overflow: hidden;
+    max-height: calc(100vh - 70px);
 }
 
 section {
@@ -910,6 +912,11 @@ screen and (max-width: 40em) {
     header {
         flex-direction: column;
         height: auto;
+    }
+
+    main {
+        overflow: auto;
+        max-height: unset;
     }
 
     #logo {

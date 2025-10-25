@@ -39,7 +39,7 @@ function getIdPosNav(id) {
 $("header a[href^='#'], #scrollIcon").click(function (e) {
 	e.preventDefault();
 	let hash = e.target.hash;
-	gsap.to(window, { duration: 2, scrollTo: $(window).innerWidth() < 599 ? (getIdPosNav(hash)) : yPos[hash] });
+	gsap.to($(window).innerWidth() < 599 ? window : "main", { duration: 2, scrollTo: $(window).innerWidth() < 599 ? (getIdPosNav(hash)) : yPos[hash] });
 });
 
 // function that runs as user scrolls //////////////////////////
