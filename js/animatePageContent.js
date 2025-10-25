@@ -126,3 +126,12 @@ window.addEventListener("DOMContentLoaded", function () {
 
 	createScroll01();
 });
+
+window.addEventListener('resize', function(event){
+	yPos = {
+		"#intro": 0,
+		"#work": getIdPosNav("#work"),
+		"#skills": getIdPosNav("#skills"),
+		"#contact": getIdPosNav("#contact")
+	};
+});

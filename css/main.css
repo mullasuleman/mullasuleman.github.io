@@ -635,7 +635,7 @@ body {
 #formBox {
     width: 40%;
     height: auto;
-    margin: auto;
+    margin: auto auto 20px;
     /* overflow: scroll; */
 }
 
