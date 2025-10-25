@@ -60,6 +60,14 @@ window.addEventListener("DOMContentLoaded", function () {
 	}
 });
 
-window.addEventListener('resize', function(event){
-  window.location.reload();
-});
+function debounce(func) {
+	var timer;
+	return function (event) {
+		if (timer) clearTimeout(timer);
+		timer = setTimeout(func, 100, event);
+	};
+}
+
+window.addEventListener("resize", debounce(function (e) {
+	window.location.reload();
+}));
