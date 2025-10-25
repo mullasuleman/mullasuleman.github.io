@@ -241,12 +241,10 @@ body {
 @keyframes revealTitle {
     from {
         transform: translateY(100px) scale(3);
-        letter-spacing: 12px;
     }
 
     to {
         transform: translateY(0px) scale(1);
-        letter-spacing: 2px;
     }
 }
 
