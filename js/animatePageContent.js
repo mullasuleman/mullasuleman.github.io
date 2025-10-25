@@ -40,6 +40,8 @@ $("header a[href^='#'], #scrollIcon").click(function (e) {
 	e.preventDefault();
 	let hash = e.target.hash;
 	gsap.to($(window).innerWidth() < 599 ? window : "main", { duration: 2, scrollTo: $(window).innerWidth() < 599 ? (getIdPosNav(hash)) : yPos[hash] });
+	$("header a[href^='#']").removeClass("active");
+	$(this).addClass("active");
 });
 
 // function that runs as user scrolls //////////////////////////
