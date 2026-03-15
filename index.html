@@ -372,10 +372,12 @@
 			{{#if clients}}
 			<div class="clients mb-3"><strong>Clients:</strong> {{{join (prepLink clients)}}}</div>
 			{{/if}}
-			{{#if tech}}
-			<!-- <div class="tech project-tags"><strong>Tech</strong>: {{join tech}}</div> -->
-			<!-- <div class="tech d-flex flex-wrap gap-2 mb-3 mt-auto">{{#each tech}} <span class="tag">{{this}}</span>{{/each}}</div> -->
-			{{/if}}
+			{{!--
+				{{#if tech}}
+				<div class="tech project-tags"><strong>Tech</strong>: {{join tech}}</div>
+				<!-- <div class="tech d-flex flex-wrap gap-2 mb-3 mt-auto">{{#each tech}} <span class="tag">{{this}}</span>{{/each}}</div> -->
+				{{/if}}
+			--}}
 		</div>
 	{{/each}}
 	</script>
