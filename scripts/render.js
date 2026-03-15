@@ -70,10 +70,10 @@ const zones = [{
 				desc: "Leading research, development and implementations in Salesforces Next-gen, AI-first product offerings including but not limited to Agentforce, Marketing Cloud Next and Salesforce Personalization. Training and mentoring wider team on the Next-gen Salesforce products.",
 				tech: ["Marketing Cloud Next", "Data 360", "Salesforce Personalization", "Agentforce", "Marketing Cloud Engagement", "Marketing Cloud Account Engagement", "Marketing Cloud Personalization"],
 				clients: [
-					{ name: "AI Real Estate", link: "https://airealestate.ca/" },
-					{ name: "Arvig", link: "https://arvig.com/" },
+					// { name: "AI Real Estate", link: "https://airealestate.ca/" },
+					// { name: "Arvig", link: "https://arvig.com/" },
 					{ name: "FlexCare", link: "https://www.flexcarestaff.com/" },
-					{ name: "Formerra", link: "https://www.formerra.com/" },
+					// { name: "Formerra", link: "https://www.formerra.com/" },
 					{ name: "KPMG", link: "https://kpmg.com/ca/" },
 					{ name: "Nestlé Purina", link: "https://www.purina.ca/" },
 					{ name: "NETSCOUT", link: "https://www.netscout.com/" },
