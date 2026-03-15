@@ -26,33 +26,33 @@ const zones = [{
 		badges: [
 			{
 				name: "Salesforce Certified Data Cloud Consultant",
-				image: "https://drm.my.salesforce.com/servlet/servlet.ImageServer?id=015Rf00000MACb7&oid=00DF0000000gZsu&lastMod=1746777787000",
+				image: "/assets/badge_data_cloud_consultant.png",
 				link: "https://www.salesforce.com/trailblazer/mullasuleman"
 			},
 			{
 				name: "Salesforce Certified Marketing Cloud Engagement Consultant",
-				image: "https://drm.my.salesforce.com/servlet/servlet.ImageServer?id=015Rf00000MAExu&oid=00DF0000000gZsu&lastMod=1746779207000",
+				image: "/assets/badge_sfmce_consultant.png",
 				link: "https://www.salesforce.com/trailblazer/mullasuleman"
 			},
 			{
 				name: "Salesforce Certified Marketing Cloud Engagement Developer",
-				image: "https://drm.my.salesforce.com/servlet/servlet.ImageServer?id=015Rf00000MACck&oid=00DF0000000gZsu&lastMod=1746779293000",
+				image: "/assets/badge_sfmce_developer.png",
 				link: "https://www.salesforce.com/trailblazer/mullasuleman"
 			},
 			{
 				name: "Salesforce Certified Marketing Cloud Account Engagement Consultant",
-				image: "https://drm.my.salesforce.com/servlet/servlet.ImageServer?id=015Rf00000MAEY5&oid=00DF0000000gZsu&lastMod=1746778751000",
+				image: "/assets/badge_sfmcae_consultant.png",
 				link: "https://www.salesforce.com/trailblazer/mullasuleman"
 			},
 			{
 				name: "Marketing Cloud Personalization Accredited Professional",
-				image: "https://drm.my.salesforce.com/servlet/servlet.ImageServer?id=015Rf00000MAIgf&oid=00DF0000000gZsu&lastMod=1746787093000",
+				image: "/assets/badge_sfmcp_professional.png",
 				link: "https://www.salesforce.com/trailblazer/mullasuleman",
 				invert: true
 			},
 			{
 				name: "Salesforce Certified Platform Administrator",
-				image: "https://drm.my.salesforce.com/servlet/servlet.ImageServer?id=015Rf00000MAGlB&oid=00DF0000000gZsu&lastMod=17467806380000",
+				image: "/assets/badge_sf_platform_admin.png",
 				link: "https://www.salesforce.com/trailblazer/mullasuleman"
 			},
 		]
