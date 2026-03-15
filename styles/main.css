@@ -434,10 +434,12 @@ section {
 	border: 2px solid var(--black);
 	display: flex;
 	box-shadow: 2px 2px 0px var(--black);
+	align-items: stretch;
 }
 
 .project.featured .img {
-	/* width: 200px; */
+	min-width: 200px;
+	height: auto;
 	border-right: 2px solid #000;
 	border-bottom: none;
 	overflow: hidden;
@@ -446,7 +448,6 @@ section {
 
 .project.featured .img img {
 	width: 100%;
-	height: 100%;
 	object-fit: contain;
 	filter: none;
 }
@@ -640,7 +641,7 @@ footer {
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	.project.featured .img {
 		border-bottom: 2px solid #000;
 		border-right: none;
@@ -685,19 +686,9 @@ footer {
 		font-size: 1.25rem;
 	}
 
-	/* .timeline-container,
-	.skills-container {
-		margin-left: 1rem;
-		margin-right: 1.5rem;
-	} */
-
 	.timeline-item {
 		margin-bottom: 20px;
 	}
-
-	/* .timeline-company {
-		margin-bottom: 8px;
-	} */
 
 	.timeline-item::before {
 		top: 34px;
