@@ -192,7 +192,7 @@ const zones = [{
 				name: "Salesforce",
 				expert: true,
 				items: [
-					"Marketing Cloud Engagement", "Marketing Cloud Next", "Data 360", "Marketing Cloud Account Engagement", "Marketing Cloud Personalization", "Salesforce Personalization", "Salesforce Platform Administration, "SSJS", "AMPScript", "SFMC SQL", "Data 360 SQL"]
+					"Marketing Cloud Engagement", "Marketing Cloud Next", "Data 360", "Marketing Cloud Account Engagement", "Marketing Cloud Personalization", "Salesforce Personalization", "Salesforce Platform Administration", "SSJS", "AMPScript", "SFMC SQL", "Data 360 SQL"]
 			},
 			{
 				name: "Web Development",
