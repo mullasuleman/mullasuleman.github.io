@@ -67,5 +67,3 @@ If you encounter any bugs, have feature requests, or need general support, pleas
 
 ## Privacy Disclaimer
 This extension does not collect, store or transfer any data locally or to any external platform.
-
-*Note: Sentry for Salesforce Personalization is an independent tool designed for developers working with Salesforce Data Cloud / Personalization (Interactions SDK) and is not officially affiliated with Salesforce.*
