@@ -1,0 +1,41 @@
+.readme {
+	padding: 30px 0 !important;
+
+	h1 {
+		font-family: 'Oswald', sans-serif;
+		font-weight: 700;
+		font-size: 1.5rem;
+		margin-top: 2rem;
+	}
+
+	h6 {
+		font-weight: 700;
+		margin-top: 1rem;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	li a {
+		color: inherit;
+	}
+
+	img {
+		width: 150px;
+		height: auto;
+	}
+
+	a img {
+		height: 60px;
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.readme {
+		a:first-of-type img {
+			margin-bottom: 1rem;
+		}
+	}
+}
