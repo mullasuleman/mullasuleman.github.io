@@ -55,7 +55,7 @@ This extension is distributed exclusively through official browser extension sto
 
 1. Install the extension from your browser's official store.
 2. Navigate to any website running the **Salesforce Interactions SDK**.
-3. Click the **Sentry for SFP** extension icon in your browser toolbar.
+3. Click the **Sentry for Salesforce Personalization** extension icon in your browser toolbar.
 4. Use the radio options at the bottom of the popup to adjust SDK logging in the Browser DevTools Console.
 5. Click **Refresh** or interact with the page to stream live SDK events and inspect event details.
 
@@ -63,7 +63,7 @@ This extension is distributed exclusively through official browser extension sto
 
 ## Support and Inquiries
 
-If you encounter any bugs, have feature requests, or need general support, please reach out to us via our [Contact Us page](#) *(Link to your contact page to be added)*.
+If you encounter any bugs, have feature requests, or need general support, please reach out to us via our [Contact Us page](#).
 
 ---
 
