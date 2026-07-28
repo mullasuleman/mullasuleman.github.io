@@ -1,3 +1,5 @@
+![Sentry for Salesforce Personalization](images/icon128.png)
+
 # Sentry for Salesforce Personalization
 
 > A lightweight browser extension for real-time debugging, logging control, and DOM event inspection for the Salesforce Interactions SDK (Salesforce Personalization).
