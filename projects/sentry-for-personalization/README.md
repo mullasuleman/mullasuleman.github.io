@@ -36,9 +36,9 @@ Stop digging through crowded browser developer tools or manually invoking consol
 
 ## Screenshots
 
-| Event Stream & Selector |  Payload Inspection   | Console Debug Output  |
-| :---------------------: | :-------------------: | :-------------------: |
-|  (images/Sentry-1.png)  | (images/Sentry-2.png) | (images/Sentry-3.png) |
+|                    Event Stream & Selector                    |                      Payload Inspection                       |                     Console Debug Output                      |
+| :-----------------------------------------------------------: | :-----------------------------------------------------------: | :-----------------------------------------------------------: |
+| ![Sentry for Salesforce Personalization](images/Sentry-1.png) | ![Sentry for Salesforce Personalization](images/Sentry-2.png) | ![Sentry for Salesforce Personalization](images/Sentry-3.png) |
 
 ---
 
