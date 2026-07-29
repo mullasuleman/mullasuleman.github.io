@@ -7,6 +7,7 @@
 [![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Available-blue)](https://chromewebstore.google.com/detail/sentry-for-salesforce-per/diacmnejanljlineiipdioodokoacnpg)
 [![Firefox Add-ons](https://img.shields.io/badge/Firefox_Add--ons-Coming%20Soon-orange)](https://addons.mozilla.org)
 
+---
 
 ## Overview
 
@@ -14,6 +15,7 @@
 
 Stop digging through crowded browser developer tools or manually invoking console commands. **Sentry for SFP** exposes internal SDK event hooks and log controls directly in a clean, intuitive popup UI, streamlining the workflow for developers, architects, and QA specialists.
 
+---
 
 ## Key Features
 
@@ -22,7 +24,7 @@ Stop digging through crowded browser developer tools or manually invoking consol
 * **On-the-Fly Console Logging Control:** Dynamically set the `SalesforceInteractions` log level directly from the UI without reloading. Switch seamlessly between **Trace**, **Debug**, **Info**, **Warn**, **Error**, or **None** (reference: [Salesforce API Debugging](https://developer.salesforce.com/docs/data/salesforce-interactions-sdk/guide/c360a-api-debugging.md)).
 * **Consent & Sitemap Diagnostics:** Easily spot sitemap matching issues, flicker defense behavior, consent opt-in status, and CDP event transmission blockers directly in your browser console.
 
-
+---
 
 ## Ideal For
 
@@ -30,6 +32,7 @@ Stop digging through crowded browser developer tools or manually invoking consol
 * **QA & Implementation Specialists** validating event triggers, user attributes, and interaction payloads.
 * **Marketers & Admins** troubleshooting why experiences or personalization campaigns aren't firing on specific page matches.
 
+---
 
 ## Installation
 
@@ -38,6 +41,7 @@ Download exclusively through official browser extension stores.
 * **Google Chrome:** [Download from the Chrome Web Store]([#](https://chromewebstore.google.com/detail/sentry-for-salesforce-per/diacmnejanljlineiipdioodokoacnpg))
 * **Mozilla Firefox:** [Download from Firefox Add-ons](#) *(Coming soon)*
 
+---
 
 ## How to Use
 
@@ -47,6 +51,7 @@ Download exclusively through official browser extension stores.
 4. Use the radio options at the bottom of the popup to adjust SDK logging in the Browser DevTools Console.
 5. Click **Refresh** or interact with the page to stream live SDK events and inspect event details.
 
+---
 
 ## Privacy Disclaimer
 This extension does not collect, store or transfer any data locally or to any external platform.
