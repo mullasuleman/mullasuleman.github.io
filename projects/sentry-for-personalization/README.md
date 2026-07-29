@@ -5,7 +5,7 @@
 > A lightweight browser extension for real-time debugging, logging control, and DOM event inspection for the Salesforce Interactions SDK (Salesforce Personalization).
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Available-blue)](https://chromewebstore.google.com/detail/sentry-for-salesforce-per/diacmnejanljlineiipdioodokoacnpg)
-[![Firefox Add-ons](https://img.shields.io/badge/Firefox_Add--ons-Coming%20Soon-orange)](https://addons.mozilla.org)
+[![Firefox Add-ons](https://img.shields.io/badge/Firefox_Add--ons-Coming%20Soon-orange)](https://addons.mozilla.org/en-US/firefox/addon/sentry-for-sf-personalization/)
 
 ---
 
@@ -38,8 +38,8 @@ Stop digging through crowded browser developer tools or manually invoking consol
 
 Download exclusively through official browser extension stores. 
 
-* **Google Chrome:** [Download from the Chrome Web Store]([#](https://chromewebstore.google.com/detail/sentry-for-salesforce-per/diacmnejanljlineiipdioodokoacnpg))
-* **Mozilla Firefox:** [Download from Firefox Add-ons](#) *(Coming soon)*
+* **Google Chrome:** [Download from the Chrome Web Store](https://chromewebstore.google.com/detail/sentry-for-salesforce-per/diacmnejanljlineiipdioodokoacnpg)
+* **Mozilla Firefox:** [Download from Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/sentry-for-sf-personalization/) *(Coming soon)*
 
 ---
 
