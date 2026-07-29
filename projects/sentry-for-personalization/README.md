@@ -9,7 +9,7 @@
 
 ---
 
-## Overview
+### Overview
 
 **Sentry for Salesforce Personalization** is the ultimate developer tool for debugging, monitoring, and validating Salesforce Personalization (Salesforce Interactions SDK) web integrations in real time.
 
@@ -17,7 +17,7 @@ Stop digging through crowded browser developer tools or manually invoking consol
 
 ---
 
-## Key Features
+### Key Features
 
 * **Live DOM Event Feed:** Capture real-time custom DOM events dispatched by the Salesforce Interactions SDK, including `interactions:onBeforeEventSend`, `interactions:onEventSend`, `interactions:onSettledSitemap`, and `interactions:onPageMatchStatusUpdated` (reference: [Salesforce Interactions DOM Events](https://developer.salesforce.com/docs/data/salesforce-interactions-sdk/guide/c360a-api-integration.md)).
 * **Event Payload Inspector:** Expand individual events to inspect detailed JSON payloads, including `actionEvent`, user ID/anonymous mapping, page type source context, and interaction details.
@@ -26,7 +26,7 @@ Stop digging through crowded browser developer tools or manually invoking consol
 
 ---
 
-## Ideal For
+### Ideal For
 
 * **Salesforce Technical Architects & Developers** implementing or debugging the Web SDK and Sitemap.
 * **QA & Implementation Specialists** validating event triggers, user attributes, and interaction payloads.
@@ -34,7 +34,7 @@ Stop digging through crowded browser developer tools or manually invoking consol
 
 ---
 
-## Installation
+### Installation
 
 Download exclusively through official browser extension stores. 
 
@@ -43,7 +43,7 @@ Download exclusively through official browser extension stores.
 
 ---
 
-## How to Use
+### How to Use
 
 1. Install the extension from your browser's official store.
 2. Navigate to any website running the **Salesforce Interactions SDK**.
@@ -53,5 +53,5 @@ Download exclusively through official browser extension stores.
 
 ---
 
-## Privacy Disclaimer
+### Privacy Disclaimer
 This extension does not collect, store or transfer any data locally or to any external platform.
