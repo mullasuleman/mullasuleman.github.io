@@ -4,8 +4,14 @@
 	h1 {
 		font-family: 'Oswald', sans-serif;
 		font-weight: 700;
-		font-size: 1.5rem;
+		font-size: 1.75rem;
 		margin-top: 2rem;
+	}
+
+	h2 {
+		font-family: 'Oswald', sans-serif;
+		font-weight: 700;
+		font-size: 1.25rem;
 	}
 
 	h6 {
@@ -22,13 +28,17 @@
 	}
 
 	img {
-		width: 150px;
+		width: 128px;
 		height: auto;
+		border: 1px solid #686868;
+		border-radius: 28px;
 	}
 
 	a img {
 		height: 20px;
 		width: auto;
+		border: none;
+		border-radius: 0;
 	}
 }
 

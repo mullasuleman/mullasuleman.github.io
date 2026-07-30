@@ -1,9 +1,17 @@
 ![Salt&Pepper for SFMC](images/salt-pepper-256.png)
-# What is Salt & Pepper for SFMC?
-Salt & Pepper for SFMC is a browser extension that adds utilities to Salesforce Marketing Cloud Engagement (SFMC) and Marketing Cloud Account Engagement (MCAE, Pardot).
 
+# Salt & Pepper for SFMC
+> Salt & Pepper for SFMC is a browser extension that adds utilities to Salesforce Marketing Cloud Engagement (SFMC) and Marketing Cloud Account Engagement (MCAE, Pardot).
 
-# SFMC-E > Email Studio > Data Extensions
+[![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Available-blue)](https://chromewebstore.google.com/detail/salt-pepper-for-sfmc/kaepngbmnmbbaihkldlepffifhjgkefn)
+[![Firefox Add-ons](https://img.shields.io/badge/Firefox_Add--ons-Available-orange)](https://addons.mozilla.org/en-US/firefox/addon/salt-pepper-for-sfmc/)
+
+---
+
+---
+
+## SFMC-E > Email Studio > Data Extensions
+
 ###### Download Data Extension Schema
   - Downloads a CSV file that includes DE Path, Name, External Key, Fields, Field Type, Field Length, Primary Key, Nullable, and Default Value
   - Sample CSV: [Sample_File_DE_Schema.csv](Sample_File_DE_Schema.csv)
@@ -15,7 +23,10 @@ Salt & Pepper for SFMC is a browser extension that adds utilities to Salesforce 
 ###### Copy SQL (all fields)
   - Copies an SQL query to the clipboard for the data extension that's currently open.
 
-# SFMC-E > Query Studio 
+---
+
+## SFMC-E > Query Studio 
+
 ###### Select/Copy fields from Data Extension Search results
   - Use the existing Object Explorer tool available in Query Studio to search for a Data Extension.
   - Once a Data Extension is selected, this extension will add a checkbox to each field and add a copy button.
@@ -30,14 +41,24 @@ Salt & Pepper for SFMC is a browser extension that adds utilities to Salesforce 
   - Data view type assist provides code suggestions as you type. It suggests data views as well as attributes. 
   - When a custom alias is defined for any data view, code suggestion will use that alias.
 
-# Account Engagement > Settings 
+---
+
+## Account Engagement > Settings 
+
 ###### Download Salesforce fields available for sync on Prospect, Account, and Opportunity objects
   - When adding a new custom field, a download icon will appear next to the sync/refresh icon. This will download all Salesforce.com fields currently available to sync with the Prospect, Account, or Opportunity Pardot/MCAE field.
 ###### CSV Export for Prospect fields
   - While viewing Prospect Fields, a "CVS Export" button will be added next to the "Add Custom Field" button. This will download a CSV containing all default and custom Prosect fields (including field name, API name, CRM field name, type, and last updated date)
 
-# Downloads
-[![Available in the Chrome Web Store](https://developer.chrome.com/static/docs/webstore/branding/image/iNEddTyWiMfLSwFD6qGq.png 'Available in the Chrome Web Store')](https://chromewebstore.google.com/detail/salt-pepper-for-sfmc/kaepngbmnmbbaihkldlepffifhjgkefn) [![FireFox - Get the Add-on](https://extensionworkshop.com/assets/img/documentation/publish/get-the-addon-178x60px.dad84b42.png 'FireFox - Get the Add-on')](https://addons.mozilla.org/en-US/firefox/addon/salt-pepper-for-sfmc/)
+---
 
-# Privacy Disclaimer
+## Downloads
+
+* **Chrome/Edge:** [Download from the Chrome Web Store](https://chromewebstore.google.com/detail/salt-pepper-for-sfmc/kaepngbmnmbbaihkldlepffifhjgkefn)
+* **Firefox:** [Download from Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/salt-pepper-for-sfmc/)
+
+---
+
+## Privacy Disclaimer
+
 This extension does not collect, store or transfer any data locally or to any external platform.
