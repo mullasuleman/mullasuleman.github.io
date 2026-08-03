@@ -265,6 +265,26 @@ const zones = [{
 			}
 		]
 	}
+}, {
+	templateId: "downloadable-projects-template",
+	containerId: "downloadable-projects-grid",
+	context: {
+		projects: [
+			{
+				title: "Sentry for Salesforce Personalization",
+				desc: "Browser extension to debug Salesforce Personalization (Interactions SDK): capture DOM events, inspect payloads, and toggle logging levels.",
+				image: "/assets/sentry-512.png",
+				image_padding: "p-5",
+				tags: ["WebExtensions API", "Chrome Extension API"],
+				link: "/projects/sentry-for-personalization"
+			}, {
+				title: "Salt & Pepper for SFMC",
+				desc: "Browser extension to add utilities to Salesforce Marketing Cloud Engagement (SFMC) and Account Engagement (Pardot).",
+				image: "/assets/salt-pepper-512.png",
+				tags: ["WebExtensions API", "Chrome Extension API"],
+				link: "/projects/salt-pepper-sfmc"
+			}]
+	}
 }];
 
 Handlebars.registerHelper('join', function (p) {

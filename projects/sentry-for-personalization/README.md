@@ -5,7 +5,7 @@
 > A lightweight browser extension for real-time debugging, logging control, and DOM event inspection for the Salesforce Interactions SDK (Salesforce Personalization).
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-Available-blue)](https://chromewebstore.google.com/detail/sentry-for-salesforce-per/diacmnejanljlineiipdioodokoacnpg)
-[![Firefox Add-ons](https://img.shields.io/badge/Firefox_Add--ons-Coming%20Soon-orange)](https://addons.mozilla.org/en-US/firefox/addon/sentry-for-sf-personalization/)
+[![Firefox Add-ons](https://img.shields.io/badge/Firefox_Add--ons-Available-orange)](https://addons.mozilla.org/en-US/firefox/addon/sentry-for-sf-personalization/)
 
 ---
 
@@ -19,7 +19,7 @@ Stop digging through crowded browser developer tools or manually invoking consol
 
 ## Key Features
 
-* **Live DOM Event Feed:** Capture real-time custom DOM events dispatched by the Salesforce Interactions SDK, including `interactions:onBeforeEventSend`, `interactions:onEventSend`, `interactions:onSettledSitemap`, and `interactions:onPageMatchStatusUpdated` (reference: [Salesforce Interactions DOM Events](https://developer.salesforce.com/docs/data/salesforce-interactions-sdk/guide/c360a-api-integration.md)).
+* **Live DOM Event Feed:** Capture real-time custom DOM events dispatched by the Salesforce Interactions SDK, including `interactions:onBeforeEventSend`, `interactions:onEventSend`, `interactions:onSettledSitemap`, `interactions:onPageMatchStatusUpdated` and more (reference: [Salesforce Interactions DOM Events](https://developer.salesforce.com/docs/data/salesforce-interactions-sdk/guide/c360a-api-integration.md)).
 * **Event Payload Inspector:** Expand individual events to inspect detailed JSON payloads, including `actionEvent`, user ID/anonymous mapping, page type source context, and interaction details.
 * **On-the-Fly Console Logging Control:** Dynamically set the `SalesforceInteractions` log level directly from the UI without reloading. Switch seamlessly between **Trace**, **Debug**, **Info**, **Warn**, **Error**, or **None** (reference: [Salesforce API Debugging](https://developer.salesforce.com/docs/data/salesforce-interactions-sdk/guide/c360a-api-debugging.md)).
 * **Consent & Sitemap Diagnostics:** Easily spot sitemap matching issues, flicker defense behavior, consent opt-in status, and CDP event transmission blockers directly in your browser console.
@@ -37,7 +37,7 @@ Stop digging through crowded browser developer tools or manually invoking consol
 ## Downloads
 
 * **Chrome/Edge:** [Download from the Chrome Web Store](https://chromewebstore.google.com/detail/sentry-for-salesforce-per/diacmnejanljlineiipdioodokoacnpg)
-* **Firefox:** [Download from Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/sentry-for-sf-personalization/) *(Coming soon)*
+* **Firefox:** [Download from Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/sentry-for-sf-personalization/)
 
 ---
 
