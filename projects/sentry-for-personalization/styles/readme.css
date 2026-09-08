@@ -28,13 +28,17 @@
 	}
 
 	img {
-		width: 150px;
+		width: 128px;
 		height: auto;
+		border: 1px solid #686868;
+		border-radius: 28px;
 	}
 
 	a img {
 		height: 20px;
 		width: auto;
+		border: none;
+		border-radius: 0;
 	}
 }
 
